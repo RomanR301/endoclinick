@@ -721,7 +721,7 @@ p {
 }
 
 .os-theme-dark .os-scrollbar .os-scrollbar-track .os-scrollbar-handle {
-  background: #152F38;
+  background: rgb(255, 170, 80);
   border-radius: 4px;
 }
 
