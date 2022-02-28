@@ -2755,12 +2755,14 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 90px;
-  min-width: 90px;
-  max-height: 90px;
-  min-height: 90px;
+  height: 90px;
   border-radius: 10px;
   overflow: hidden;
+}
+.card__logo img {
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 .card__image {
@@ -2817,7 +2819,14 @@ p {
   font-weight: 700;
   margin-left: 20px;
 }
-
+@media (max-width: 767px) {
+  .card__logo {
+    height: 60px;
+  }
+  .card__text {
+    padding: 5px 15px;
+  }
+}
 .contacts-form {
   padding: 40px 0;
 }
@@ -4059,7 +4068,6 @@ p {
   .card__text {
     padding: 23px 30px;
   }
-
   .contacts-form {
     padding: 70px 0;
   }
