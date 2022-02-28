@@ -3027,7 +3027,26 @@ p {
 .form .select__options li[rel="hide"] {
   display: none;
 }
-
+.contacts__wrapper .contacts__socials__list {
+  display: flex;
+}
+.contacts__wrapper .contacts__socials__list a {
+  margin-right: 25px;
+}
+@media (max-width: 767px) {
+  .contacts__table {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .footer__list__bottom {
+    flex-direction: column;
+  }
+  .footer .footer__list__bottom li {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 @supports (-webkit-appearance:none) {
   .refering.hero {
     background-image: url(../img/hero-background-2.webp);
@@ -3308,7 +3327,7 @@ p {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    max-width: 300px;
+    max-width: 400px;
   }
 
   .contacts .show__trigger {
