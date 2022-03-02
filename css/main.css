@@ -2763,6 +2763,8 @@ p {
   height: 100%;
   width: 100%;
   display: block;
+  object-fit: contain;
+  object-position: left;
 }
 
 .card__image {
