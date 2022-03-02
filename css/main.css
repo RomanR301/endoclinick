@@ -1751,6 +1751,18 @@ p {
   visibility: visible;
 }
 
+
+@media (max-width: 460px) {
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 2px;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+  }
+}
 .testimonials {
   padding: 40px 0;
 }
@@ -2739,6 +2751,8 @@ p {
   -o-object-fit: cover;
   object-fit: cover;
 }
+
+
 
 .card {
   display: -webkit-box;
