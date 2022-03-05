@@ -317,6 +317,65 @@ button {
   outline: none;
 }
 
+#map {
+  width: 100%;
+  height: 500px;
+  outline: none;
+  z-index: 1;
+}
+
+.marker {
+  background-image: url('../img/map-marker.png');
+	width: 27px;
+	height: 36px;
+  background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.mapboxgl-popup-content {
+  padding: 16px 20px!important;
+  border-radius: 10px;
+}
+.mapboxgl-popup-close-button {
+  display: none;
+}
+.mapboxgl-popup {
+  max-width: 300px!important;
+}
+.popup-header {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.popup-header img{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+.popup-header .popup__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.mapboxgl-popup-content p {
+  font-size: 16px;
+  color: #152F38;
+  line-height: 26px;
+}
+.mapboxgl-popup-content a {
+  color: #BC8B5E;
+  font-size: 16px;
+  line-height: 26px;
+  text-decoration: none;
+  font-family: inherit;
+  transition: all .3s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+.mapboxgl-popup-content a:hover {
+  border-color: #BC8B5E;
+}
 .site-container {
   margin: 0 auto;
   overflow: hidden;
@@ -3049,6 +3108,7 @@ p {
 .contacts__wrapper .contacts__socials__list a {
   margin-right: 25px;
 }
+
 @media (max-width: 767px) {
   .contacts__table {
     flex-direction: column;

@@ -10,6 +10,8 @@
   <!-- Import Style's -->
   <link rel="stylesheet" href="./css/vendor.min.css">
   <link rel="stylesheet" href="./css/main.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -108,11 +110,111 @@
       <section class="contacts">
         <div class="container">
           <a href="tel:020 3627 5732" class="contacts__phone">020 3627 5732</a>
-          <div class="map">
-            <picture>
-              <source srcset="img/map.webp" type="image/webp"><img src="img/map.png" alt="Map">
-            </picture>
-          </div>
+          <div id="map"></div>
+          <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw';
+
+            const geojson = {
+              'type': 'FeatureCollection',
+              'features': [
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.138, 51.488]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': '57 Markham Street SW3 3NR London',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.019, 51.506]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': 'Level Zero, Crossrail Pl, London E14 5AR',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.395, 51.534]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': 'Centurion Court, 64 London Road Reading RG1 5AS',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.103, 51.006]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': '61 Perrymount Rd, Haywards Heath RH16 1DN',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.184, 50.830]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': '21 New Church Road The City of BN3 4AD',
+                    'link': 'Inquire now'
+                  }
+                }
+              ]
+            };
+            const map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
+              center: [-0.007, 51.510],
+              zoom: 10
+            });
+            for (const feature of geojson.features) {
+              // create a HTML element for each feature
+              const el = document.createElement('div');
+              el.className = 'marker';
+              // make a marker for each feature and add it to the map
+              new mapboxgl.Marker(el)
+                .setLngLat(feature.geometry.coordinates)
+                .setPopup(
+                  new mapboxgl.Popup({ offset: 25 }) // add popups
+                    .setHTML(
+                      `<div class="popup-header">
+                        <img src="${feature.properties.icon}">
+                        <div class="popup__title">${feature.properties.title}</div>
+                      </div>                      
+                      <p>${feature.properties.description}</p> 
+                      <a href="#">${feature.properties.link}</a>`
+                    )
+                )
+                .addTo(map);
+            }
+            var nav = new mapboxgl.NavigationControl();
+            map.addControl(nav, 'top-right');
+            map.addControl(new mapboxgl.FullscreenControl());
+
+          </script>
           <div class="contacts__table">
             <h3>Locations</h3>
             <div class="contacts__wrapper locations__wrapper">
