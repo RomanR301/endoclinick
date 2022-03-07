@@ -217,7 +217,7 @@ window.onload = function () {
   //     tabItem[i].classList.add("js-active");
   //     tabDropdownTrigger.textContent = document.querySelector(".tabs__trigger.js-active").textContent
   //   });
-  // } 
+  // }
   // if (tabDropdownTrigger) {
   //   tabDropdownTrigger.textContent = document.querySelector(".tabs__trigger.js-active").textContent
   // }

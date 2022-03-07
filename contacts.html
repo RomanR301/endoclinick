@@ -203,8 +203,8 @@
                       `<div class="popup-header">
                         <img src="${feature.properties.icon}">
                         <div class="popup__title">${feature.properties.title}</div>
-                      </div>                      
-                      <p>${feature.properties.description}</p> 
+                      </div>
+                      <p>${feature.properties.description}</p>
                       <a href="#">${feature.properties.link}</a>`
                     )
                 )
@@ -273,12 +273,12 @@
               Referring dentist?
             </a>
           </div>
-          <form action="" class="form">
-            <input type="text" name="user_name" id="" class="form__field" placeholder="Name">
-            <input type="tel" name="user_phone" id="" class="form__field" placeholder="Phone">
-            <input type="email" name="user_email" id="" class="form__field" placeholder="Email">
+          <form action="sendEmail.php" method="POST" class="form" enctype="multipart/form-data">
+            <input type="text" name="user_name" class="form__field" placeholder="Name">
+            <input type="tel" name="user_phone" class="form__field" placeholder="Phone">
+            <input type="email" name="user_email" class="form__field" placeholder="Email">
 
-            <select id="mounth">
+            <select name="user_issue" id="mounth">
               <option value="hide">Dental issue</option>
               <option value="root canal treatment">Root canal treatment</option>
               <option value="tooth infection">Tooth infection</option>
@@ -289,7 +289,7 @@
               <option value="broken tooth">Broken tooth</option>
               <option value="other">Other</option>
             </select>
-            <textarea name="" id="" rows="1" class="form__field message" placeholder="Message"></textarea>
+            <textarea name="user_message" rows="1" class="form__field message" placeholder="Message"></textarea>
             <button type="submit" class="btn-primary">
               Send
             </button>

@@ -10,6 +10,8 @@
   <!-- Import Style's -->
   <link rel="stylesheet" href="./css/vendor.min.css">
   <link rel="stylesheet" href="./css/main.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body class="refering">
@@ -490,11 +492,112 @@
               </span>
             </a>
           </div>
-          <div class="map">
-            <picture>
-              <source srcset="img/map.webp" type="image/webp"><img src="img/map.png" alt="">
-            </picture>
-          </div>
+          <div id="map"></div>
+          <script>
+            mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw';
+
+            const geojson = {
+              'type': 'FeatureCollection',
+              'features': [
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.138, 51.488]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': '57 Markham Street SW3 3NR London',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.019, 51.506]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': 'Level Zero, Crossrail Pl, London E14 5AR',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.395, 51.534]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': 'Centurion Court, 64 London Road Reading RG1 5AS',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.103, 51.006]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': '61 Perrymount Rd, Haywards Heath RH16 1DN',
+                    'link': 'Inquire now'
+                  }
+                },
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-0.184, 50.830]
+                  },
+                  'properties': {
+                    'icon': 'img/map-icon-bupa.svg',
+                    'title': 'Chelsea Green Dental',
+                    'description': '21 New Church Road The City of BN3 4AD',
+                    'link': 'Inquire now'
+                  }
+                }
+              ]
+            };
+            const map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
+              center: [-0.007, 51.510],
+              zoom: 10
+            });
+            for (const feature of geojson.features) {
+              // create a HTML element for each feature
+              const el = document.createElement('div');
+              el.className = 'marker';
+              // make a marker for each feature and add it to the map
+              new mapboxgl.Marker(el)
+                .setLngLat(feature.geometry.coordinates)
+                .setPopup(
+                  new mapboxgl.Popup({ offset: 25 }) // add popups
+                    .setHTML(
+                      `<div class="popup-header">
+                        <img src="${feature.properties.icon}">
+                        <div class="popup__title">${feature.properties.title}</div>
+                      </div>
+                      <p>${feature.properties.description}</p>
+                      <a href="#">${feature.properties.link}</a>`
+                    )
+                )
+                .addTo(map);
+            }
+            var nav = new mapboxgl.NavigationControl();
+            map.addControl(nav, 'top-right');
+            map.addControl(new mapboxgl.FullscreenControl());
+
+          </script>
+
         </div>
       </section>
       <!-- Contacts -->
@@ -503,24 +606,24 @@
           <div class="section-header">
             <h2>Refer a patient</h2>
           </div>
-          <form action="#" class="form">
+            <form action="sendEmailReferring.php" method="POST" class="form" enctype="multipart/form-data">
             <div class="form__table">
               <div class="form-wrapper">
                 <h3>Referring dentist</h3>
-                <input type="text" name="dentist_name" id="" class="form__field" placeholder="Dentist's full name">
-                <input type="text" name="dentist_address" id="" class="form__field"
+                <input type="text" name="dentist_name" class="form__field" placeholder="Dentist's full name">
+                <input type="text" name="dentist_address" class="form__field"
                   placeholder="Practice name and address">
-                <input type="email" name="dentist_email" id="" class="form__field" placeholder="Email">
-                <input type="tel" name="dentist_phone" id="" class="form__field" placeholder="Phone">
-                <input type="text" name="dentist_gdc" id="" class="form__field" placeholder="GDC number">
+                <input type="email" name="dentist_email" class="form__field" placeholder="Email">
+                <input type="tel" name="dentist_phone" class="form__field" placeholder="Phone">
+                <input type="text" name="dentist_gdc" class="form__field" placeholder="GDC number">
 
               </div>
               <div class="form-wrapper">
                 <h3>Patient details</h3>
-                <input type="text" name="user_name" id="" class="form__field" placeholder="Patient's name">
-                <input type="date" name="user_datebirth" id="" class="form__field" placeholder="Date of birth">
-                <input type="email" name="user_email" id="" class="form__field" placeholder="Email">
-                <input type="tel" name="user_phone" id="" class="form__field" placeholder="Phone">
+                <input type="text" name="user_name" class="form__field" placeholder="Patient's name">
+                <input type="date" name="user_datebirth" class="form__field" placeholder="Date of birth">
+                <input type="email" name="user_email" class="form__field" placeholder="Email">
+                <input type="tel" name="user_phone" class="form__field" placeholder="Phone">
 
               </div>
             </div>
@@ -531,7 +634,7 @@
               <div class="tooth__table">
                 <div class="tooth__wrapper">
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-18" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -549,7 +652,7 @@
                     <span class="tooth__number">18</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-17" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -567,7 +670,7 @@
                     <span class="tooth__number">17</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-16" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -585,7 +688,7 @@
                     <span class="tooth__number">16</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-15"class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -603,7 +706,7 @@
                     <span class="tooth__number">15</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-14" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -621,7 +724,7 @@
                     <span class="tooth__number">14</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-13" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -639,7 +742,7 @@
                     <span class="tooth__number">13</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-12" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -657,7 +760,7 @@
                     <span class="tooth__number">12</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-11" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -677,7 +780,7 @@
                 </div>
                 <div class="tooth__wrapper">
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-21" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -695,7 +798,7 @@
                     <span class="tooth__number">21</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-22" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -713,7 +816,7 @@
                     <span class="tooth__number">22</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-23" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -731,7 +834,7 @@
                     <span class="tooth__number">23</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-24" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -749,7 +852,7 @@
                     <span class="tooth__number">24</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-25" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -767,7 +870,7 @@
                     <span class="tooth__number">25</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-26" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -785,7 +888,7 @@
                     <span class="tooth__number">26</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-27" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -803,7 +906,7 @@
                     <span class="tooth__number">27</span>
                   </label>
                   <label class="tooth__item">
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-28" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -824,7 +927,7 @@
                 <div class="tooth__wrapper items-top">
                   <label class="tooth__item">
                     <span class="tooth__number">48</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-48" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -842,7 +945,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">47</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-47" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -860,7 +963,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">46</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-46" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -878,7 +981,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">45</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-45" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -896,7 +999,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">44</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-44" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -914,7 +1017,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">43</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-43" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -932,7 +1035,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">42</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-42" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -950,7 +1053,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">41</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-41" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -970,7 +1073,7 @@
                 <div class="tooth__wrapper items-top">
                   <label class="tooth__item">
                     <span class="tooth__number">31</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-31" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -988,7 +1091,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">32</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-32" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -1006,7 +1109,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">33</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-33" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -1024,7 +1127,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">34</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-34" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -1042,7 +1145,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">35</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-35" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -1060,7 +1163,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">36</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-36" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -1078,7 +1181,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">37</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-37" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -1096,7 +1199,7 @@
                   </label>
                   <label class="tooth__item">
                     <span class="tooth__number">38</span>
-                    <input type="checkbox" name="" id="" class="tooth__checkbox">
+                    <input type="checkbox" name="tooth[]" value="tooth-38" class="tooth__checkbox">
                     <span class="tooth__images">
                       <span class="tooth__image">
                         <picture>
@@ -1120,19 +1223,19 @@
             </p>
             <div class="radio-container">
               <label class="radio-item">
-                <input type="radio" name="procedure" id="" class="radio-item__input" checked>
+                <input type="radio" name="procedure" value="Diagnose only" class="radio-item__input">
                 <span class="radio-item__text">Diagnose only</span>
               </label>
               <label class="radio-item">
-                <input type="radio" name="procedure" id="" class="radio-item__input">
+                <input type="radio" name="procedure" value="Diagnose and treat" class="radio-item__input">
                 <span class="radio-item__text">Diagnose and treat</span>
               </label>
             </div>
-            <textarea name="" id="" rows="1" class="form__field message"
+            <textarea name="reason_for_referral" rows="1" class="form__field message"
               placeholder="Please provide the reason for referral"></textarea>
             <div class="files">
               <label class="files-trigger">
-                <input type="file" id="file" class="files-trigger__input" multiple>
+                <input type="file" name="upload[]" id="file" class="files-trigger__input" multiple>
                 <span class="files-trigger__text">
                   <i class="icon-paper-clip"></i>
                   Add files
