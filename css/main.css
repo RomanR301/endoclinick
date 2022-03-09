@@ -1064,6 +1064,12 @@ p {
 .site-container-about {
   overflow: initial;
 }
+.header {
+  pointer-events: none;
+}
+.header .container * {
+  pointer-events: all;
+}
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;

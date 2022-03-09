@@ -564,6 +564,8 @@ window.onload = function () {
   var sliderTestimonials = new Swiper('.testimonials-slider', {
     slidesPerView: 1,
     spaceBetween: 30,
+    autoplay: true,
+    delay: 5000,
     loop: true,
     navigation: {
       nextEl: ".testimonials-button-next",
