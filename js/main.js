@@ -623,7 +623,6 @@ window.onload = function () {
   });
 }; // Scroll to anchor
 
-
 var linksScroll = document.querySelectorAll(".scroll__link");
 
 var _iterator4 = _createForOfIteratorHelper(linksScroll),
