@@ -1,585 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endoclinic - Home</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endoclinic - Home</title>
+    <!-- Import Style's -->
+    <link rel="stylesheet" href="./css/vendor.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+  </head>
 
-  <!-- Import Style's -->
-  <link rel="stylesheet" href="./css/vendor.min.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
-</head>
-
-<body>
-
-  <div class="site-container">
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <picture>
-            <source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="Logo of Endoclinic">
-          </picture>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list menu">
-            <li class="nav__item menu-item ">
-              <a href="treatments.html" class="nav__link">
-                <span class="symbol">Tr</span>
-                <span class="number">34</span>
-                <span class="title">Treatments</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="about.html" class="nav__link">
-                <span class="symbol">Ab</span>
-                <span class="number">27</span>
-                <span class="title">About us</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="technology.html" class="nav__link">
-                <span class="symbol">Te</span>
-                <span class="number">11</span>
-                <span class="title">Technology</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item plug">
-              <a href="" class="nav__link">
-                <span class="symbol"></span>
-                <span class="number"></span>
-                <span class="title"></span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="contacts.html" class="nav__link">
-                <span class="symbol">Co</span>
-                <span class="number">44</span>
-                <span class="title">Contact</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="contacts.html" class="nav__link">
-                <span class="symbol">Lo</span>
-                <span class="number">31</span>
-                <span class="title">Locations</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button class="burger">
-          <span class="burger__wrapper">
-            <span class="burger__line"></span>
-          </span>
-        </button>
-        <div class="header-contacts">
-          <ul class="header-contacts__list">
-            <li class="header-contacts__item">
-              <a href="#contacts-form" class="header-contacts__link scroll__link">
-                <i class="icon-email"></i>
-              </a>
-            </li>
-            <li class="header-contacts__item">
-              <a href="tel:02036275732" class="header-contacts__link">
-                <i class="icon-phone"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="header-content">
-          <div class="container">
-            <ul class="header-content__list">
-              <li class="header-content__item">
-                57 Markham Street SW3 3NR London
+  <body>
+    <div class="site-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <picture>
+              <source srcset="img/logo.svg" type="image/webp" />
+              <img src="img/logo.svg" alt="Logo of Endoclinic" />
+            </picture>
+          </a>
+          <nav class="nav">
+            <ul class="nav__list menu">
+              <li class="nav__item menu-item">
+                <a href="treatments.html" class="nav__link">
+                  <span class="symbol">Tr</span>
+                  <span class="number">34</span>
+                  <span class="title">Treatments</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                Level Zero, Crossrail Pl, London E14 5AR
+              <li class="nav__item menu-item">
+                <a href="about.html" class="nav__link">
+                  <span class="symbol">Ab</span>
+                  <span class="number">27</span>
+                  <span class="title">About us</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                Centurion Court, 64 London Road Reading RG1 5AS
+              <li class="nav__item menu-item">
+                <a href="technology.html" class="nav__link">
+                  <span class="symbol">Te</span>
+                  <span class="number">11</span>
+                  <span class="title">Technology</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                61 Perrymount Rd, Haywards Heath RH16 1DN
+              <li class="nav__item menu-item plug">
+                <a href="" class="nav__link">
+                  <span class="symbol"></span>
+                  <span class="number"></span>
+                  <span class="title"></span>
+                </a>
               </li>
-              <li class="header-content__item">
-                21 New Church Road The City of BN3 4AD
+              <li class="nav__item menu-item">
+                <a href="contacts.html" class="nav__link">
+                  <span class="symbol">Co</span>
+                  <span class="number">44</span>
+                  <span class="title">Contact</span>
+                </a>
+              </li>
+              <li class="nav__item menu-item">
+                <a href="contacts.html" class="nav__link">
+                  <span class="symbol">Lo</span>
+                  <span class="number">31</span>
+                  <span class="title">Locations</span>
+                </a>
               </li>
             </ul>
-            <div class="header-content__footer">
-              <a href="tel:020 3627 5732" class="header-content__link">020 3627 5732</a>
-              <a href="referring.html" class="btn-secondary">
-                Referring dentist?
-              </a>
+          </nav>
+          <button class="burger">
+            <span class="burger__wrapper">
+              <span class="burger__line"></span>
+            </span>
+          </button>
+          <div class="header-contacts">
+            <ul class="header-contacts__list">
+              <li class="header-contacts__item">
+                <a href="#contacts-form" class="header-contacts__link scroll__link">
+                  <i class="icon-email"></i>
+                </a>
+              </li>
+              <li class="header-contacts__item">
+                <a href="tel:02036275732" class="header-contacts__link">
+                  <i class="icon-phone"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-content">
+            <div class="container">
+              <ul class="header-content__list">
+                <li class="header-content__item">57 Markham Street SW3 3NR London</li>
+                <li class="header-content__item">Level Zero, Crossrail Pl, London E14 5AR</li>
+                <li class="header-content__item">Centurion Court, 64 London Road Reading RG1 5AS</li>
+                <li class="header-content__item">61 Perrymount Rd, Haywards Heath RH16 1DN</li>
+                <li class="header-content__item">21 New Church Road The City of BN3 4AD</li>
+              </ul>
+              <div class="header-content__footer">
+                <a href="tel:020 3627 5732" class="header-content__link">020 3627 5732</a>
+                <a href="referring.html" class="btn-secondary"> Referring dentist? </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <main>
-      <!-- Hero -->
-      <section class="hero">
-        <div class="container">
-          <h1>When dentists need root canal treatment, here's who they turn to</h1>
-          <p>Join the 7,000+ people who have put their endodontic treatment in the hands of the UK's leading expert. Dr
-            Jassar El Jabouri is meticulous about pain management and patient care – and uses the latest technology to
-            offer you the ultimate in root canal therapy.</p>
-          <a href="#" class="btn-primary">
-            Enquire now
-          </a>
-          <a href="referring.html" class="btn-secondary">
-            Referring dentist?
-          </a>
-        </div>
-        <picture>
-          <source srcset="img/hero-background.webp" type="image/webp"><img src="img/hero-background.png"
-            alt="Background image" class="hero__background">
-        </picture>
-      </section>
-      <!-- Treatments -->
-      <section class="treatments">
-        <div class="container">
-          <div class="section-header">
-            <h2>Treatments</h2>
-            <a href="treatments.html" class="link-primary">
-              <span class="link-primary__title">See more</span>
-              <span class="link-primary__circle">
-                <span class="link-primary__arrow"></span>
-              </span>
-            </a>
+      </header>
+      <main>
+        <!-- Hero -->
+        <section class="hero">
+          <div class="container">
+            <h1>When dentists need root canal treatment, here's who they turn to</h1>
+            <p>
+              Join the 7,000+ people who have put their endodontic treatment in the hands of the UK's leading expert. Dr Jassar El Jabouri is meticulous about pain management and patient care – and uses the latest technology to offer you the ultimate
+              in root canal therapy.
+            </p>
+            <a href="#" class="btn-primary"> Enquire now </a>
+            <a href="referring.html" class="btn-secondary"> Referring dentist? </a>
           </div>
-        </div>
-        <div class="swiper treatments-slider">
-          <div class="swiper-wrapper horizontal-scroll">
-            <div class="swiper-slide treatments-slide">
-              <a href="treatments.html#root-canal-retreatment" class="card">
-                <div class="card__image">
-                  <picture>
-                    <source srcset="img/treatments/treatments-2.webp" type="image/webp"><img
-                      src="img/treatments/treatments-2.png" alt="Treatments preview">
-                  </picture>
-                </div>
-                <div class="card__text">
-                  <h3>Root canal treatment</h3>
-                  <div class="card__price">
-                    From
-                    <span>£895</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide treatments-slide">
-              <a href="treatments.html#second-opinion-report" class="card">
-                <div class="card__image">
-                  <picture>
-                    <source srcset="img/treatments/treatments-3.webp" type="image/webp"><img
-                      src="img/treatments/treatments-3.png" alt="Treatments preview">
-                  </picture>
-                </div>
-                <div class="card__text">
-                  <h3>Second opinion with report</h3>
-                  <div class="card__price">
-                    From
-                    <span>£375</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide treatments-slide">
-              <a href="treatments.html#cbct-scan" class="card">
-                <div class="card__image">
-                  <picture>
-                    <source srcset="img/treatments/treatments-1.webp" type="image/webp"><img
-                      src="img/treatments/treatments-1.png" alt="Treatments preview">
-                  </picture>
-                </div>
-                <div class="card__text">
-                  <h3>CBCT Scan</h3>
-                  <div class="card__price">
-                    From
-                    <span>£175</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide treatments-slide">
-              <a href="treatments.html#sedation" class="card">
-                <div class="card__image">
-                  <picture>
-                    <source srcset="img/treatments/treatments-6.webp" type="image/webp"><img
-                      src="img/treatments/treatments-6.png" alt="Treatments preview">
-                  </picture>
-                </div>
-                <div class="card__text">
-                  <h3>Sedation</h3>
-                  <div class="card__price">
-                    From
-                    <span>£450/hour</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide treatments-slide">
-              <a href="treatments.html#metal-free-crowns" class="card">
-                <div class="card__image">
-                  <picture>
-                    <source srcset="img/treatments/treatments-4.webp" type="image/webp"><img
-                      src="img/treatments/treatments-4.png" alt="Treatments preview">
-                  </picture>
-                </div>
-                <div class="card__text">
-                  <h3>Metal Free Crown</h3>
-                  <div class="card__price">
-                    From
-                    <span>£1,250</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="swiper-slide treatments-slide">
-              <a href="treatments.html#white-composite-fillings" class="card">
-                <div class="card__image">
-                  <picture>
-                    <source srcset="img/treatments/treatments-5.webp" type="image/webp"><img
-                      src="img/treatments/treatments-5.png" alt="Treatments preview">
-                  </picture>
-                </div>
-                <div class="card__text">
-                  <h3>White composite fillings</h3>
-                  <div class="card__price">
-                    From
-                    <span>£300</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="swiper-navigation">
-            <div class="swiper-button-prev treatments-button-prev">
-              <button class="link-primary">
+          <picture>
+            <source srcset="img/hero-background.webp" type="image/webp" />
+            <img src="img/hero-background.png" alt="Background image" class="hero__background" />
+          </picture>
+        </section>
+        <!-- Treatments -->
+        <section class="treatments">
+          <div class="container">
+            <div class="section-header">
+              <h2>Treatments</h2>
+              <a href="treatments.html" class="link-primary">
+                <span class="link-primary__title">See more</span>
                 <span class="link-primary__circle">
                   <span class="link-primary__arrow"></span>
                 </span>
-              </button>
-            </div>
-            <div class="swiper-pagination treatments-pagination"></div>
-            <div class="swiper-button-next treatments-button-next">
-              <button class="link-primary">
-                <span class="link-primary__circle">
-                  <span class="link-primary__arrow"></span>
-                </span>
-              </button>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- About -->
-      <section class="about">
-        <div class="container">
-          <div class="section-header">
-            <h2>About us</h2>
-            <a href="about.html" class="link-primary">
-              <span class="link-primary__title">See more</span>
-              <span class="link-primary__circle">
-                <span class="link-primary__arrow"></span>
-              </span>
-            </a>
-          </div>
-          <div class="about-table">
-            <div class="about__photo">
-              <picture>
-                <source srcset="img/about/about-photo-1.webp" type="image/webp">
-                <img src="img/about/about-photo-1.png" alt="Us Photo">
-              </picture>
-            </div>
-            <div class="about-text">
-              <h4>Where precision and knowledge meet the experience</h4>
-              <p class="site-description">The Endodontic Clinic was founded by Dr Jassar El Jabouri, one of the UK's
-                leading experts in the field of root canal treatment. Working across five luxuriously-appointed dental
-                practices in the south of England, he offers discerning clients the very best in endodontic treatment,
-                with a focus on patient care, pain management and the industry's most advanced technology.</p>
-              <div class="about-progress-table">
-                <div class="about-progress-wrapper">
-                  <div class="about-progress__item">
-                    <picture>
-                      <source srcset="img/about/about-progress-1.webp" type="image/webp"><img
-                        src="img/about/about-progress-1.png" alt="About Progress">
-                    </picture>
-                  </div>
-                </div>
-                <div class="about-progress-wrapper">
-                  <div class="about-progress__item">
-                    <picture>
-                      <source srcset="img/about/about-progress-2.webp" type="image/webp"><img
-                        src="img/about/about-progress-2.png" alt="About Progress">
-                    </picture>
-                  </div>
-                </div>
-              </div>
-              <div class="about-label-table">
-                <div class="about-label">
-                  <div class="about-label-dots">
-                    <span class="about-label__dot"></span>
-                    <span class="about-label__dot"></span>
-                    <span class="about-label__dot active"></span>
-                  </div>
-                  <span class="about-label__title">19+ years of experience</span>
-                </div>
-                <div class="about-label">
-                  <div class="about-label-dots">
-                    <span class="about-label__dot"></span>
-                    <span class="about-label__dot active"></span>
-                    <span class="about-label__dot"></span>
-                  </div>
-                  <span class="about-label__title">Innovative equipment</span>
-                </div>
-                <div class="about-label">
-                  <div class="about-label-dots">
-                    <span class="about-label__dot"></span>
-                    <span class="about-label__dot"></span>
-                    <span class="about-label__dot active"></span>
-                  </div>
-                  <span class="about-label__title">Personalized Treatment</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Testimonials -->
-      <section class="testimonials">
-        <div class="container">
-          <div class="section-header">
-            <h2>Testimonials</h2>
-          </div>
-        </div>
-        <div class="swiper testimonials-slider">
-          <div class="swiper-wrapper testimonials-wrapper">
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>Great service from beginning to end. Dr El Jabouri was extremely thorough when explaining the
-                  procedure and the pros and cons. He also identified another issue (outside of his remit) that needed
-                  attention. I would definitely recommend the practice.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>Anila R.</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>Amazing service, very reasonable – but importantly, a trustworthy dentist. I was looking for a good
-                  dentist for a while and was recommend to visit Dr El Jabouri. He is very knowledgeable, very detailed,
-                  he explained everything thoroughly and did fantastic job with my teeth. I then recommended my mum and
-                  she was really pleased with the quality – and mentioned how gentle and thorough he had been.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>Oksana M.</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>Dr El Jabouri is a real asset to the practice. Since my first appointment he listened to me and
-                  advised me with honesty, without hiding any of the costs. He is open to discussing anything during
-                  treatment and I can’t thank him enough.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>KADI M.</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>Prompt, professional and competent. Diagnosed and sorted out a problem that another dentist could not
-                  solve – despite three visits. I am also grateful to Dr El Jabouri for a thorough and patient
-                  explanation of my options. I would definitely recommend him.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>Archana P.</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>I recently attended the surgery after being referred by my dentist, and saw Dr El Jabouri. I had
-                  several dental issues with a number of potential solutions and was unsure as to what option to take.
-                  After an examination, I then spent at least 30 mins with Dr El Jabouri while he discussed all the
-                  options, drew some useful diagrams and answered all of my many questions. I thought that his ability
-                  to discuss my options in such detail was excellent, and I left with a clear understanding of the
-                  reasons behind my dental problems, as well as why the relevant treatment options were recommended.
-                  Excellent service – thank you.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>Nigel H.</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>Dr Jassar El Jabouri was simply brilliant. It's the first time I have come across a true expert who
-                  not only had honesty and integrity but who gave fabulous customer care, too. He treated my 70-year-old
-                  mother and was extremely precise: he truly wanted to meet her needs – and not just make money. Highly
-                  recommended.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>Jagdish T.</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>Great experience visiting the clinic. Very welcoming and friendly atmosphere. Dr El Jabouri was great
-                  at explaining the issue that i had with my tooth and recommended the ideal treatment to solve it.
-                  Their pricing is very reasonable and competitive compared to others in the town when I was researching
-                  endodontics.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>Andrew</h5>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials-slide">
-              <div class="testimonials-card">
-                <i class="icon-quotes"></i>
-                <p>I love the treatment I get. I feel I am a priority and I am treated with respect. Despite being
-                  anxious pre and during treatment, I felt a great sense of trust in my dentists. They are extremely
-                  thorough, and the nurses are absolutely amazing too.</p>
-                <div class="testimonials-card-stars">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                </div>
-                <h5>Nicole S.</h5>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-navigation">
-            <div class="swiper-button-prev testimonials-button-prev">
-              <button class="link-primary">
-                <span class="link-primary__circle">
-                  <span class="link-primary__arrow"></span>
-                </span>
-              </button>
-            </div>
-            <div class="swiper-pagination testimonials-pagination"></div>
-            <div class="swiper-button-next testimonials-button-next">
-              <button class="link-primary">
-                <span class="link-primary__circle">
-                  <span class="link-primary__arrow"></span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Practices -->
-      <section class="practices">
-        <div class="container">
-          <div class="section-header">
-            <h2>Practices</h2>
-          </div>
-          <div class="swiper practices-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide practices-slide">
-                <div class="card">
+          <div class="swiper treatments-slider">
+            <div class="swiper-wrapper horizontal-scroll">
+              <div class="swiper-slide treatments-slide">
+                <a href="treatments.html#root-canal-retreatment" class="card">
                   <div class="card__image">
                     <picture>
-                      <source srcset="img/practices/practices-2.webp" type="image/webp"><img
-                        src="img/practices/practices-2.png" alt="Practices Preview">
+                      <source srcset="img/treatments/treatments-2.webp" type="image/webp" />
+                      <img src="img/treatments/treatments-2.png" alt="Treatments preview" />
                     </picture>
                   </div>
-                  <div class="card__logo">
-                    <img src="img/practices/practices-logo-bupa-dental.png" alt="Logo of Company">
+                  <div class="card__text">
+                    <h3>Root canal treatment</h3>
+                    <div class="card__price">
+                      From
+                      <span>£895</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide treatments-slide">
+                <a href="treatments.html#second-opinion-report" class="card">
+                  <div class="card__image">
+                    <picture>
+                      <source srcset="img/treatments/treatments-3.webp" type="image/webp" />
+                      <img src="img/treatments/treatments-3.png" alt="Treatments preview" />
+                    </picture>
                   </div>
                   <div class="card__text">
-                    <h3>Clinic Dental Facial</h3>
+                    <h3>Second opinion with report</h3>
+                    <div class="card__price">
+                      From
+                      <span>£375</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide treatments-slide">
+                <a href="treatments.html#cbct-scan" class="card">
+                  <div class="card__image">
+                    <picture>
+                      <source srcset="img/treatments/treatments-1.webp" type="image/webp" />
+                      <img src="img/treatments/treatments-1.png" alt="Treatments preview" />
+                    </picture>
+                  </div>
+                  <div class="card__text">
+                    <h3>CBCT Scan</h3>
+                    <div class="card__price">
+                      From
+                      <span>£175</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide treatments-slide">
+                <a href="treatments.html#sedation" class="card">
+                  <div class="card__image">
+                    <picture>
+                      <source srcset="img/treatments/treatments-6.webp" type="image/webp" />
+                      <img src="img/treatments/treatments-6.png" alt="Treatments preview" />
+                    </picture>
+                  </div>
+                  <div class="card__text">
+                    <h3>Sedation</h3>
+                    <div class="card__price">
+                      From
+                      <span>£450/hour</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide treatments-slide">
+                <a href="treatments.html#metal-free-crowns" class="card">
+                  <div class="card__image">
+                    <picture>
+                      <source srcset="img/treatments/treatments-4.webp" type="image/webp" />
+                      <img src="img/treatments/treatments-4.png" alt="Treatments preview" />
+                    </picture>
+                  </div>
+                  <div class="card__text">
+                    <h3>Metal Free Crown</h3>
+                    <div class="card__price">
+                      From
+                      <span>£1,250</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide treatments-slide">
+                <a href="treatments.html#white-composite-fillings" class="card">
+                  <div class="card__image">
+                    <picture>
+                      <source srcset="img/treatments/treatments-5.webp" type="image/webp" />
+                      <img src="img/treatments/treatments-5.png" alt="Treatments preview" />
+                    </picture>
+                  </div>
+                  <div class="card__text">
+                    <h3>White composite fillings</h3>
+                    <div class="card__price">
+                      From
+                      <span>£300</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-navigation">
+              <div class="swiper-button-prev treatments-button-prev">
+                <button class="link-primary">
+                  <span class="link-primary__circle">
+                    <span class="link-primary__arrow"></span>
+                  </span>
+                </button>
+              </div>
+              <div class="swiper-pagination treatments-pagination"></div>
+              <div class="swiper-button-next treatments-button-next">
+                <button class="link-primary">
+                  <span class="link-primary__circle">
+                    <span class="link-primary__arrow"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- About -->
+        <section class="about">
+          <div class="container">
+            <div class="section-header">
+              <h2>About us</h2>
+              <a href="about.html" class="link-primary">
+                <span class="link-primary__title">See more</span>
+                <span class="link-primary__circle">
+                  <span class="link-primary__arrow"></span>
+                </span>
+              </a>
+            </div>
+            <div class="about-table">
+              <div class="about__photo">
+                <picture>
+                  <source srcset="img/about/about-photo-1.webp" type="image/webp" />
+                  <img src="img/about/about-photo-1.png" alt="Us Photo" />
+                </picture>
+              </div>
+              <div class="about-text">
+                <h4>Where precision and knowledge meet the experience</h4>
+                <p class="site-description">
+                  The Endodontic Clinic was founded by Dr Jassar El Jabouri, one of the UK's leading experts in the field of root canal treatment. Working across five luxuriously-appointed dental practices in the south of England, he offers
+                  discerning clients the very best in endodontic treatment, with a focus on patient care, pain management and the industry's most advanced technology.
+                </p>
+                <div class="about-progress-table">
+                  <div class="about-progress-wrapper">
+                    <div class="about-progress__item">
+                      <picture>
+                        <source srcset="img/about/about-progress-1.webp" type="image/webp" />
+                        <img src="img/about/about-progress-1.png" alt="About Progress" />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="about-progress-wrapper">
+                    <div class="about-progress__item">
+                      <picture>
+                        <source srcset="img/about/about-progress-2.webp" type="image/webp" />
+                        <img src="img/about/about-progress-2.png" alt="About Progress" />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-label-table">
+                  <div class="about-label">
+                    <div class="about-label-dots">
+                      <span class="about-label__dot"></span>
+                      <span class="about-label__dot"></span>
+                      <span class="about-label__dot active"></span>
+                    </div>
+                    <span class="about-label__title">19+ years of experience</span>
+                  </div>
+                  <div class="about-label">
+                    <div class="about-label-dots">
+                      <span class="about-label__dot"></span>
+                      <span class="about-label__dot active"></span>
+                      <span class="about-label__dot"></span>
+                    </div>
+                    <span class="about-label__title">Innovative equipment</span>
+                  </div>
+                  <div class="about-label">
+                    <div class="about-label-dots">
+                      <span class="about-label__dot"></span>
+                      <span class="about-label__dot"></span>
+                      <span class="about-label__dot active"></span>
+                    </div>
+                    <span class="about-label__title">Personalized Treatment</span>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide practices-slide">
-                <div class="card">
-                  <div class="card__image">
-                    <picture>
-                      <source srcset="img/practices/practices-3.webp" type="image/webp"><img
-                        src="img/practices/practices-3.png" alt="Practices Preview">
-                    </picture>
+            </div>
+          </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="testimonials">
+          <div class="container">
+            <div class="section-header">
+              <h2>Testimonials</h2>
+            </div>
+          </div>
+          <div class="swiper testimonials-slider">
+            <div class="swiper-wrapper testimonials-wrapper">
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    Great service from beginning to end. Dr El Jabouri was extremely thorough when explaining the procedure and the pros and cons. He also identified another issue (outside of his remit) that needed attention. I would definitely
+                    recommend the practice.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
                   </div>
-                  <div class="card__logo">
-                    <img src="img/practices/practices-logo-bupa.png" alt="Logo of Company">
-                  </div>
-                  <div class="card__text">
-                    <h3>Bupa Health and Dental Centre Reading</h3>
-                  </div>
+                  <h5>Anila R.</h5>
                 </div>
               </div>
-              <div class="swiper-slide practices-slide">
-                <div class="card">
-                  <div class="card__image">
-                    <picture>
-                      <source srcset="img/practices/practices-4.webp" type="image/webp"><img
-                        src="img/practices/practices-4.png" alt="Practices Preview">
-                    </picture>
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    Amazing service, very reasonable – but importantly, a trustworthy dentist. I was looking for a good dentist for a while and was recommend to visit Dr El Jabouri. He is very knowledgeable, very detailed, he explained everything
+                    thoroughly and did fantastic job with my teeth. I then recommended my mum and she was really pleased with the quality – and mentioned how gentle and thorough he had been.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
                   </div>
-                  <div class="card__logo">
-                    <img src="img/practices/practices-logo-bupa.png" alt="Logo of Company">
+                  <h5>Oksana M.</h5>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    Dr El Jabouri is a real asset to the practice. Since my first appointment he listened to me and advised me with honesty, without hiding any of the costs. He is open to discussing anything during treatment and I can’t thank him
+                    enough.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
                   </div>
-                  <div class="card__text">
-                    <h3>Bupa Health and Dental Centre Canary Wharf</h3>
+                  <h5>KADI M.</h5>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    Prompt, professional and competent. Diagnosed and sorted out a problem that another dentist could not solve – despite three visits. I am also grateful to Dr El Jabouri for a thorough and patient explanation of my options. I would
+                    definitely recommend him.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
                   </div>
+                  <h5>Archana P.</h5>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    I recently attended the surgery after being referred by my dentist, and saw Dr El Jabouri. I had several dental issues with a number of potential solutions and was unsure as to what option to take. After an examination, I then
+                    spent at least 30 mins with Dr El Jabouri while he discussed all the options, drew some useful diagrams and answered all of my many questions. I thought that his ability to discuss my options in such detail was excellent, and I
+                    left with a clear understanding of the reasons behind my dental problems, as well as why the relevant treatment options were recommended. Excellent service – thank you.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                  <h5>Nigel H.</h5>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    Dr Jassar El Jabouri was simply brilliant. It's the first time I have come across a true expert who not only had honesty and integrity but who gave fabulous customer care, too. He treated my 70-year-old mother and was extremely
+                    precise: he truly wanted to meet her needs – and not just make money. Highly recommended.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                  <h5>Jagdish T.</h5>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    Great experience visiting the clinic. Very welcoming and friendly atmosphere. Dr El Jabouri was great at explaining the issue that i had with my tooth and recommended the ideal treatment to solve it. Their pricing is very
+                    reasonable and competitive compared to others in the town when I was researching endodontics.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                  <h5>Andrew</h5>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-slide">
+                <div class="testimonials-card">
+                  <i class="icon-quotes"></i>
+                  <p>
+                    I love the treatment I get. I feel I am a priority and I am treated with respect. Despite being anxious pre and during treatment, I felt a great sense of trust in my dentists. They are extremely thorough, and the nurses are
+                    absolutely amazing too.
+                  </p>
+                  <div class="testimonials-card-stars">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                  <h5>Nicole S.</h5>
                 </div>
               </div>
             </div>
             <div class="swiper-navigation">
-              <div class="swiper-button-prev practices-button-prev">
+              <div class="swiper-button-prev testimonials-button-prev">
                 <button class="link-primary">
                   <span class="link-primary__circle">
                     <span class="link-primary__arrow"></span>
                   </span>
                 </button>
               </div>
-              <div class="swiper-pagination practices-pagination"></div>
-              <div class="swiper-button-next practices-button-next">
+              <div class="swiper-pagination testimonials-pagination"></div>
+              <div class="swiper-button-next testimonials-button-next">
                 <button class="link-primary">
                   <span class="link-primary__circle">
                     <span class="link-primary__arrow"></span>
@@ -588,420 +498,471 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Technology -->
-      <section class="technology">
+        </section>
+        <!-- Practices -->
+        <section class="practices">
+          <div class="container">
+            <div class="section-header">
+              <h2>Practices</h2>
+            </div>
+            <div class="swiper practices-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide practices-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <img src="img/practices/practices-1.jpg" alt="Practices Preview" />
+                    </div>
+                    <div class="card__logo">
+                      <img src="img/practices/practices-logo-chelsea-green.svg" alt="Chelsea Green Dental Logo" />
+                    </div>
+                    <div class="card__text">
+                      <h3>Chelsea Green Dental</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide practices-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <img src="img/practices/practices-2.jpg" alt="Practices Preview" />
+                    </div>
+                    <div class="card__logo">
+                      <img src="img/practices/practices-logo-dental.svg" alt="Bupa Dental logo" />
+                    </div>
+                    <div class="card__text">
+                      <h3>Clinic Dental Facial</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide practices-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <img src="img/practices/practices-3.jpg" alt="Bupa Health and Dental Centre Reading" />
+                    </div>
+                    <div class="card__logo">
+                      <img src="img/practices/practices-logo-bupa.svg" alt="Bupa Logo" />
+                    </div>
+                    <div class="card__text">
+                      <h3>Bupa Health and Dental Centre Reading</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide practices-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <img src="img/practices/practices-4.jpg" alt="Bupa Health and Dental Centre Canary Wharf" />
+                    </div>
+                    <div class="card__logo">
+                      <img src="img/practices/practices-logo-bupa.svg" alt="Bupa Logo" />
+                    </div>
+                    <div class="card__text">
+                      <h3>Bupa Health and Dental Centre Canary Wharf</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide practices-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <img src="img/practices/practices-5.jpg" alt="TwentyOneDental" />
+                    </div>
+                    <div class="card__logo">
+                      <img src="img/practices/practices-logo-twenty-one-dental.svg" alt="TwentyOneDental Logo" />
+                    </div>
+                    <div class="card__text">
+                      <h3>TwentyOneDental</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-prev practices-button-prev">
+                  <button class="link-primary">
+                    <span class="link-primary__circle">
+                      <span class="link-primary__arrow"></span>
+                    </span>
+                  </button>
+                </div>
+                <div class="swiper-pagination practices-pagination"></div>
+                <div class="swiper-button-next practices-button-next">
+                  <button class="link-primary">
+                    <span class="link-primary__circle">
+                      <span class="link-primary__arrow"></span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Technology -->
+        <section class="technology">
+          <div class="container">
+            <div class="section-header">
+              <h2>Technology</h2>
+              <a href="technology.html" class="link-primary">
+                <span class="link-primary__title">See more</span>
+                <span class="link-primary__circle">
+                  <span class="link-primary__arrow"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="technology__content">
+            <div class="technology__table">
+              <div class="technology__wrapper js-active">
+                <div class="technology-card">
+                  <div class="technology-card__image">
+                    <picture>
+                      <source srcset="img/technology/technology-1.webp" type="image/webp" />
+                      <img src="img/technology/technology-1.png" alt="Technology preview" />
+                    </picture>
+                  </div>
+                  <div class="technology-card__content">
+                    <div class="technology-card__header">
+                      <h3>Technology-assisted diagnostics (digital x-rays, CBCT)</h3>
+                    </div>
+                    <div class="technology-card__body">
+                      <p>Our state-of-the-art imaging tech allows us to see inside the tooth and the surrounding area. It means we can diagnose conditions with more accuracy, eliminate pain and devise the best-possible treatment plan.</p>
+                      <a href="technology.html" class="link-primary">
+                        <span class="link-primary__title">See more</span>
+                        <span class="link-primary__circle">
+                          <span class="link-primary__arrow"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="technology__wrapper">
+                <div class="technology-card">
+                  <div class="technology-card__image">
+                    <picture>
+                      <source srcset="img/technology/technology-2.webp" type="image/webp" />
+                      <img src="img/technology/technology-2.png" alt="Technology preview" />
+                    </picture>
+                  </div>
+                  <div class="technology-card__content">
+                    <div class="technology-card__header">
+                      <h3>Rotary Files, Protaper Ultimate</h3>
+                    </div>
+                    <div class="technology-card__body">
+                      <p>
+                        They may be tiny, but the rotary files we use at The Endodontic Clinic are pivotal to the success of your root canal treatment – so we only use the very best. For every patient, we carefully select exactly the right files well
+                        in advance.
+                      </p>
+                      <a href="technology.html#rotary-files-protaper-ultimate" class="link-primary">
+                        <span class="link-primary__title">See more</span>
+                        <span class="link-primary__circle">
+                          <span class="link-primary__arrow"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="technology__wrapper">
+                <div class="technology-card">
+                  <div class="technology-card__image">
+                    <picture>
+                      <source srcset="img/technology/technology-3.webp" type="image/webp" />
+                      <img src="img/technology/technology-3.png" alt="Technology preview" />
+                    </picture>
+                  </div>
+                  <div class="technology-card__content">
+                    <div class="technology-card__header">
+                      <h3>3D Root Filling</h3>
+                    </div>
+                    <div class="technology-card__body">
+                      <p>Once the area around a damaged root has been meticulously cleansed, the root needs to be filled. We use only the highest-grade bioceramic sealers to ensure that even the most demanding root canal anatomies can be filled.</p>
+                      <a href="technology.html#3d-root-filling" class="link-primary">
+                        <span class="link-primary__title">See more</span>
+                        <span class="link-primary__circle">
+                          <span class="link-primary__arrow"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="technology__wrapper">
+                <div class="technology-card">
+                  <div class="technology-card__image">
+                    <picture>
+                      <source srcset="img/technology/technology-4.webp" type="image/webp" />
+                      <img src="img/technology/technology-4.png" alt="Technology preview" />
+                    </picture>
+                  </div>
+                  <div class="technology-card__content">
+                    <div class="technology-card__header">
+                      <h3>Ultrasonics</h3>
+                    </div>
+                    <div class="technology-card__body">
+                      <p>Tiny impurities left behind during treatment can wreak havoc during root canal therapy, so we use incredibly powerful ultrasonic tools to make sure that the area we are working on is as clean as it can possibly be.</p>
+                      <a href="technology.html#ultrasonics" class="link-primary">
+                        <span class="link-primary__title">See more</span>
+                        <span class="link-primary__circle">
+                          <span class="link-primary__arrow"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="technology__wrapper">
+                <div class="technology-card">
+                  <div class="technology-card__image">
+                    <picture>
+                      <source srcset="img/technology/technology-5.webp" type="image/webp" />
+                      <img src="img/technology/technology-5.png" alt="Technology preview" />
+                    </picture>
+                  </div>
+                  <div class="technology-card__content">
+                    <div class="technology-card__header">
+                      <h3>Microscope and Orascoptic loupes</h3>
+                    </div>
+                    <div class="technology-card__body">
+                      <p>Through the lens of his state-of-the-art Carl Zeiss microscope, Dr El Jabouri is able to zoom right into the tiniest recesses of a patient's root canal system. Orascoptic loups with Konica lenses complete the picture.</p>
+                      <a href="technology.html#microscope-and-orascoptic-loupes" class="link-primary">
+                        <span class="link-primary__title">See more</span>
+                        <span class="link-primary__circle">
+                          <span class="link-primary__arrow"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="technology__wrapper">
+                <div class="technology-card">
+                  <div class="technology-card__image">
+                    <picture>
+                      <source srcset="img/technology/technology-6.webp" type="image/webp" />
+                      <img src="img/technology/technology-6.png" alt="Technology preview" />
+                    </picture>
+                  </div>
+                  <div class="technology-card__content">
+                    <div class="technology-card__header">
+                      <h3>3D Computer Guided Endodontics</h3>
+                    </div>
+                    <div class="technology-card__body">
+                      <p>
+                        In cases where root canals become restricted, we can use 3D scanning techniques to create a 'map' of the affected area and then use this to build a physical 3D model. With this as a guide, we can create precision-based
+                        treatment plans of the highest calibre.
+                      </p>
+                      <a href="technology.html#3d-computer-guided-endodontics" class="link-primary">
+                        <span class="link-primary__title">See more</span>
+                        <span class="link-primary__circle">
+                          <span class="link-primary__arrow"></span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Locations -->
+        <section class="locations">
+          <div class="container">
+            <div class="section-header">
+              <h2>Locations</h2>
+              <a href="contacts.html" class="link-primary">
+                <span class="link-primary__title">See more</span>
+                <span class="link-primary__circle">
+                  <span class="link-primary__arrow"></span>
+                </span>
+              </a>
+            </div>
+            <div id="map"></div>
+            <script>
+              mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw';
+  
+              const geojson = {
+                'type': 'FeatureCollection',
+                'features': [
+                  {
+                    'type': 'Feature',
+                    'geometry': {
+                      'type': 'Point',
+                      'coordinates': [-0.165, 51.490]
+                    },
+                    'properties': {
+                      'icon': 'img/practices/practices-logo-chelsea-green.svg',
+                      'title': 'Chelsea Green Dental',
+                      'description': '57 Markham Street SW3 3NR London',
+                      'link': 'Inquire now'
+                    }
+                  },
+                  {
+                    'type': 'Feature',
+                    'geometry': {
+                      'type': 'Point',
+                      'coordinates': [-0.018, 51.506]
+                    },
+                    'properties': {
+                      'icon': 'img/practices/map-bupa-dental.png',
+                      'title': 'Clinic Dental Facial',
+                      'description': 'Level Zero, Crossrail Pl, London E14 5AR',
+                      'link': 'Inquire now'
+                    }
+                  },
+                  {
+                    'type': 'Feature',
+                    'geometry': {
+                      'type': 'Point',
+                      'coordinates': [-0.395, 51.534]
+                    },
+                    'properties': {
+                      'icon': 'img/map-icon-bupa.svg',
+                      'title': 'Bupa Health and Dental Centre Reading',
+                      'description': 'Centurion Court, 64 London Road Reading RG1 5AS',
+                      'link': 'Inquire now'
+                    }
+                  },
+                  {
+                    'type': 'Feature',
+                    'geometry': {
+                      'type': 'Point',
+                      'coordinates': [-0.103, 51.006]
+                    },
+                    'properties': {
+                      'icon': 'img/map-icon-bupa.svg',
+                      'title': 'Bupa Health and Dental Centre Canary Wharf',
+                      'description': '61 Perrymount Rd, Haywards Heath RH16 1DN',
+                      'link': 'Inquire now'
+                    }
+                  },
+                  {
+                    'type': 'Feature',
+                    'geometry': {
+                      'type': 'Point',
+                      'coordinates': [-0.184, 50.830]
+                    },
+                    'properties': {
+                      'icon': 'img/practices/map-twentyonedental.svg',
+                      'title': 'TwentyOneDental',
+                      'description': '21 New Church Road The City of BN3 4AD',
+                      'link': 'Inquire now'
+                    }
+                  }
+                ]
+              };
+              const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
+                center: [-0.007, 51.170],
+                zoom: 8
+              });
+              for (const feature of geojson.features) {
+                // create a HTML element for each feature
+                const el = document.createElement('div');
+                el.className = 'marker';
+                // make a marker for each feature and add it to the map
+                new mapboxgl.Marker(el)
+                  .setLngLat(feature.geometry.coordinates)
+                  .setPopup(
+                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                      .setHTML(
+                        `<div class="popup-header">
+                          <img src="${feature.properties.icon}">
+                          <div class="popup__title">${feature.properties.title}</div>
+                        </div>
+                        <p>${feature.properties.description}</p>
+                        <a href="#">${feature.properties.link}</a>`
+                      )
+                  )
+                  .addTo(map);
+              }
+              var nav = new mapboxgl.NavigationControl();
+              map.addControl(nav, 'top-right');
+              map.addControl(new mapboxgl.FullscreenControl());
+              map.scrollZoom.disable();
+            </script>
+          </div>
+        </section>
+        <!-- Contacts form -->
+        <section id="contacts-form" class="contacts-form" role="form">
+          <div class="container">
+            <div class="section-header">
+              <h2>Contacts us</h2>
+              <a href="referring.html" class="btn-secondary"> Referring dentist? </a>
+            </div>
+            <form action="sendEmail.php" method="POST" class="form" enctype="multipart/form-data">
+              <input type="text" name="user_name" class="form__field" placeholder="Name" />
+              <input type="tel" name="user_phone" class="form__field" placeholder="Phone" />
+              <input type="email" name="user_email" class="form__field" placeholder="Email" />
+
+              <select name="user_issue" id="mounth">
+                <option value="hide">Dental issue</option>
+                <option value="root canal treatment">Root canal treatment</option>
+                <option value="tooth infection">Tooth infection</option>
+                <option value="toothache">Toothache</option>
+                <option value="lost filling">Lost filling</option>
+                <option value="lost crown">Lost crown</option>
+                <option value="bleaching">Bleaching</option>
+                <option value="broken tooth">Broken tooth</option>
+                <option value="other">Other</option>
+              </select>
+              <textarea name="user_message" rows="1" class="form__field message" placeholder="Message"></textarea>
+              <button type="submit" class="btn-primary">Send</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
         <div class="container">
-          <div class="section-header">
-            <h2>Technology</h2>
-            <a href="technology.html" class="link-primary">
-              <span class="link-primary__title">See more</span>
-              <span class="link-primary__circle">
-                <span class="link-primary__arrow"></span>
-              </span>
+          <div class="footer__row">
+            <a href="index.html" class="logo">
+              <picture>
+                <source srcset="img/logo.svg" type="image/webp" />
+                <img src="img/logo.svg" alt="Logo of Endoclinic" />
+              </picture>
             </a>
+            <ul class="footer__list">
+              <li>
+                <a href="treatments.html"> Treatments </a>
+              </li>
+              <li>
+                <a href="technology.html"> Technology </a>
+              </li>
+              <li>
+                <a href="about.html"> About us </a>
+              </li>
+              <li>
+                <a href="contact.html"> Contact </a>
+              </li>
+              <li>
+                <a href="Locations.html"> Locations </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="technology__content">
-          <div class="technology__table">
-            <div class="technology__wrapper js-active">
-              <div class="technology-card">
-                <div class="technology-card__image">
-                  <picture>
-                    <source srcset="img/technology/technology-1.webp" type="image/webp"><img
-                      src="img/technology/technology-1.png" alt="Technology preview">
-                  </picture>
-                </div>
-                <div class="technology-card__content">
-                  <div class="technology-card__header">
-                    <h3>Technology-assisted diagnostics (digital x-rays, CBCT)</h3>
-                  </div>
-                  <div class="technology-card__body">
-                    <p>
-                      Our state-of-the-art imaging tech allows us to see inside the tooth and the surrounding area. It
-                      means we can diagnose conditions with more accuracy, eliminate pain and devise the best-possible
-                      treatment plan.
-                    </p>
-                    <a href="technology.html" class="link-primary">
-                      <span class="link-primary__title">See more</span>
-                      <span class="link-primary__circle">
-                        <span class="link-primary__arrow"></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="technology__wrapper">
-              <div class="technology-card">
-                <div class="technology-card__image">
-                  <picture>
-                    <source srcset="img/technology/technology-2.webp" type="image/webp"><img
-                      src="img/technology/technology-2.png" alt="Technology preview">
-                  </picture>
-                </div>
-                <div class="technology-card__content">
-                  <div class="technology-card__header">
-                    <h3>Rotary Files, Protaper Ultimate</h3>
-                  </div>
-                  <div class="technology-card__body">
-                    <p>
-                      They may be tiny, but the rotary files we use at The Endodontic Clinic are pivotal to the success
-                      of your root canal treatment – so we only use the very best. For every patient, we carefully
-                      select exactly the right files well in advance.
-                    </p>
-                    <a href="technology.html#rotary-files-protaper-ultimate" class="link-primary">
-                      <span class="link-primary__title">See more</span>
-                      <span class="link-primary__circle">
-                        <span class="link-primary__arrow"></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="technology__wrapper">
-              <div class="technology-card">
-                <div class="technology-card__image">
-                  <picture>
-                    <source srcset="img/technology/technology-3.webp" type="image/webp"><img
-                      src="img/technology/technology-3.png" alt="Technology preview">
-                  </picture>
-                </div>
-                <div class="technology-card__content">
-                  <div class="technology-card__header">
-                    <h3>3D Root Filling</h3>
-                  </div>
-                  <div class="technology-card__body">
-                    <p>
-                      Once the area around a damaged root has been meticulously cleansed, the root needs to be filled.
-                      We use only the highest-grade bioceramic sealers to ensure that even the most demanding root canal
-                      anatomies can be filled.
-                    </p>
-                    <a href="technology.html#3d-root-filling" class="link-primary">
-                      <span class="link-primary__title">See more</span>
-                      <span class="link-primary__circle">
-                        <span class="link-primary__arrow"></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="technology__wrapper">
-              <div class="technology-card">
-                <div class="technology-card__image">
-                  <picture>
-                    <source srcset="img/technology/technology-4.webp" type="image/webp"><img
-                      src="img/technology/technology-4.png" alt="Technology preview">
-                  </picture>
-                </div>
-                <div class="technology-card__content">
-                  <div class="technology-card__header">
-                    <h3>Ultrasonics</h3>
-                  </div>
-                  <div class="technology-card__body">
-                    <p>
-                      Tiny impurities left behind during treatment can wreak havoc during root canal therapy, so we use
-                      incredibly powerful ultrasonic tools to make sure that the area we are working on is as clean as
-                      it can possibly be.
-                    </p>
-                    <a href="technology.html#ultrasonics" class="link-primary">
-                      <span class="link-primary__title">See more</span>
-                      <span class="link-primary__circle">
-                        <span class="link-primary__arrow"></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="technology__wrapper">
-              <div class="technology-card">
-                <div class="technology-card__image">
-                  <picture>
-                    <source srcset="img/technology/technology-5.webp" type="image/webp"><img
-                      src="img/technology/technology-5.png" alt="Technology preview">
-                  </picture>
-                </div>
-                <div class="technology-card__content">
-                  <div class="technology-card__header">
-                    <h3>Microscope and Orascoptic loupes</h3>
-                  </div>
-                  <div class="technology-card__body">
-                    <p>
-                      Through the lens of his state-of-the-art Carl Zeiss microscope, Dr El Jabouri is able to zoom
-                      right into the tiniest recesses of a patient's root canal system. Orascoptic loups with Konica
-                      lenses complete the picture.
-                    </p>
-                    <a href="technology.html#microscope-and-orascoptic-loupes" class="link-primary">
-                      <span class="link-primary__title">See more</span>
-                      <span class="link-primary__circle">
-                        <span class="link-primary__arrow"></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="technology__wrapper">
-              <div class="technology-card">
-                <div class="technology-card__image">
-                  <picture>
-                    <source srcset="img/technology/technology-6.webp" type="image/webp"><img
-                      src="img/technology/technology-6.png" alt="Technology preview">
-                  </picture>
-                </div>
-                <div class="technology-card__content">
-                  <div class="technology-card__header">
-                    <h3>3D Computer Guided Endodontics</h3>
-                  </div>
-                  <div class="technology-card__body">
-                    <p>
-                      In cases where root canals become restricted, we can use 3D scanning techniques to create a 'map'
-                      of the affected area and then use this to build a physical 3D model. With this as a guide, we can
-                      create precision-based treatment plans of the highest calibre.
-                    </p>
-                    <a href="technology.html#3d-computer-guided-endodontics" class="link-primary">
-                      <span class="link-primary__title">See more</span>
-                      <span class="link-primary__circle">
-                        <span class="link-primary__arrow"></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Locations -->
-      <section class="locations">
-        <div class="container">
-          <div class="section-header">
-            <h2>Locations</h2>
-            <a href="contacts.html" class="link-primary">
-              <span class="link-primary__title">See more</span>
-              <span class="link-primary__circle">
-                <span class="link-primary__arrow"></span>
-              </span>
-            </a>
-          </div>
-          <div id='map'></div>
-          <script>
-            mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw';
-
-            const geojson = {
-              'type': 'FeatureCollection',
-              'features': [
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.138, 51.488]
-                  },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': '57 Markham Street SW3 3NR London',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.019, 51.506]
-                  },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': 'Level Zero, Crossrail Pl, London E14 5AR',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.395, 51.534]
-                  },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': 'Centurion Court, 64 London Road Reading RG1 5AS',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.103, 51.006]
-                  },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': '61 Perrymount Rd, Haywards Heath RH16 1DN',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.184, 50.830]
-                  },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': '21 New Church Road The City of BN3 4AD',
-                    'link': 'Inquire now'
-                  }
-                }
-              ]
-            };
-            const map = new mapboxgl.Map({
-              container: 'map',
-              style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
-              center: [-0.007, 51.510],
-              zoom: 10
-            });
-            for (const feature of geojson.features) {
-              // create a HTML element for each feature
-              const el = document.createElement('div');
-              el.className = 'marker';
-              // make a marker for each feature and add it to the map
-              new mapboxgl.Marker(el)
-                .setLngLat(feature.geometry.coordinates)
-                .setPopup(
-                  new mapboxgl.Popup({ offset: 25 }) // add popups
-                    .setHTML(
-                      `<div class="popup-header">
-                        <img src="${feature.properties.icon}">
-                        <div class="popup__title">${feature.properties.title}</div>
-                      </div>
-                      <p>${feature.properties.description}</p>
-                      <a href="#">${feature.properties.link}</a>`
-                    )
-                )
-                .addTo(map);
-            }
-            var nav = new mapboxgl.NavigationControl();
-            map.addControl(nav, 'top-right');
-            map.addControl(new mapboxgl.FullscreenControl());
-
-          </script>
-        </div>
-      </section>
-      <!-- Contacts form -->
-      <section id="contacts-form" class="contacts-form" role="form">
-        <div class="container">
-          <div class="section-header">
-            <h2>Contacts us</h2>
-            <a href="referring.html" class="btn-secondary">
-              Referring dentist?
-            </a>
-          </div>
-          <form action="sendEmail.php" method="POST" class="form" enctype="multipart/form-data">
-            <input type="text" name="user_name" class="form__field" placeholder="Name">
-            <input type="tel" name="user_phone" class="form__field" placeholder="Phone">
-            <input type="email" name="user_email" class="form__field" placeholder="Email">
-
-            <select name="user_issue" id="mounth">
-              <option value="hide">Dental issue</option>
-              <option value="root canal treatment">Root canal treatment</option>
-              <option value="tooth infection">Tooth infection</option>
-              <option value="toothache">Toothache</option>
-              <option value="lost filling">Lost filling</option>
-              <option value="lost crown">Lost crown</option>
-              <option value="bleaching">Bleaching</option>
-              <option value="broken tooth">Broken tooth</option>
-              <option value="other">Other</option>
-            </select>
-            <textarea name="user_message" rows="1" class="form__field message" placeholder="Message"></textarea>
-            <button type="submit" class="btn-primary">
-              Send
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__row">
-          <a href="index.html" class="logo">
-            <picture>
-              <source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="Logo of Endoclinic">
-            </picture>
-          </a>
-          <ul class="footer__list">
+          <ul class="footer__list__bottom">
             <li>
-              <a href="treatments.html">
-                Treatments
-              </a>
+              <h3>Phone</h3>
+              <a href="tel:020 3627 5732"> 020 3627 5732 </a>
             </li>
             <li>
-              <a href="technology.html">
-                Technology
-              </a>
+              <h3>Email</h3>
+              <a href="mailto:info@theendodonticclinic.co.uk"> info@theendodonticclinic.co.uk </a>
             </li>
             <li>
-              <a href="about.html">
-                About us
-              </a>
-            </li>
-            <li>
-              <a href="contact.html">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="Locations.html">
-                Locations
-              </a>
+              <h3>Location</h3>
+              <a href="#"> 57 Markham Street SW3 3NR London </a>
             </li>
           </ul>
+          <div class="copyright">
+            <a href="#"> Terms and Conditions </a>
+            <a href="privacy-policy.html"> Privacy Policy </a>
+          </div>
         </div>
-        <ul class="footer__list__bottom">
-          <li>
-            <h3>Phone</h3>
-            <a href="tel:020 3627 5732">
-              020 3627 5732
-            </a>
-          </li>
-          <li>
-            <h3>Email</h3>
-            <a href="mailto:info@theendodonticclinic.co.uk">
-              info@theendodonticclinic.co.uk
-            </a>
-          </li>
-          <li>
-            <h3>Location</h3>
-            <a href="#">
-              57 Markham Street SW3 3NR London
-            </a>
-          </li>
-        </ul>
-        <div class="copyright">
-          <a href="#">
-            Terms and Conditions
-          </a>
-          <a href="privacy-policy.html">
-            Privacy Policy
-          </a>
-        </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <!-- Import Script's -->
+    <!-- Import Script's -->
 
-  <script src="./js/vendor.min.js"></script>
-  <script src="./js/main.js"></script>
-</body>
-
+    <script src="./js/vendor.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

@@ -332,10 +332,11 @@
                   <p>The end result is designed to mirror the look of the original tooth as closely as possible – and as the material used is semi-translucent (as is the case with natural teeth), the effect is very convincing.</p>
                   <h4>Does it hurt?</h4>
                   <p>
-                    No, though there will be a small pin-prick when the IV needle is applied. What may be very appealing to some is that dental sedation creates a period of amnesia, so you won’t remember the procedure when you wake up. It can also be
-                    beneficial when multiple procedures are needed: when patients are relaxed and not experiencing any discomfort, they are more easily able to sit for longer spells in the dentist’s chair, with the result that several visits may be
-                    condensed into one.
+                    We understand that few people would readily say they enjoy going to the dentist, and as root canal treatments are on the complex side of dentistry, some people – quite understandably – are nervous. However, the notion that root
+                    canal treatment is painful is largely a myth as, in most cases, the nerve has actually died. That being said, we do everything we can to make your experience at The Endodontic Clinic pleasant as possible, and this includes
+                    anaesthetising the infected area: this numbs the tooth and the surrounding area and keeps pain to an absolute minimum.
                   </p>
+                  <p>Our skilled and experienced staff, plus state-of-the-art facilities and the latest in dental technology, mean that patients are in the best possible hands. Pain management is always at the front of our minds.</p>
                   <img src="img/treatments/treatments-single/treatments-single-6.jpg" alt="Treatments preview" />
                 </div>
               </div>
@@ -625,22 +626,25 @@
     <script src="./js/vendor.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
-      $(function() {
-          var pgurl = window.location.hash.split('').slice(1).join('');
-          console.log(pgurl)
-          const offsetTop = $('.header').outerHeight() + $('.dropdown__trigger').outerHeight() + 130
-          console.log(offsetTop)
-          if (pgurl === '') {
-            $('.default-open-item').addClass("js-current");
+      $(function () {
+        var pgurl = window.location.hash.split("").slice(1).join("");
+        console.log(pgurl);
+        const offsetTop = $(".header").outerHeight() + $(".dropdown__trigger").outerHeight() + 130;
+        console.log(offsetTop);
+        if (pgurl === "") {
+          $(".default-open-item").addClass("js-current");
+        }
+        $(".dropdown__item li").each(function () {
+          if ($(this).data("item") === pgurl) {
+            $(this).addClass("js-current");
+            $("html, body").animate(
+              {
+                scrollTop: $(`#${pgurl}`).offset().top - offsetTop,
+              },
+              300
+            );
           }
-            $(".dropdown__item li").each(function(){
-              if ($(this).data("item") === pgurl) {
-                $(this).addClass("js-current");
-                $('html, body').animate({ 
-                  scrollTop: $(`#${pgurl}`).offset().top - offsetTop
-                }, 300);
-              }
-          })
+        });
       });
     </script>
   </body>

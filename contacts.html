@@ -135,10 +135,10 @@
                   'type': 'Feature',
                   'geometry': {
                     'type': 'Point',
-                    'coordinates': [-0.138, 51.488]
+                    'coordinates': [-0.165, 51.490]
                   },
                   'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
+                    'icon': 'img/practices/practices-logo-chelsea-green.svg',
                     'title': 'Chelsea Green Dental',
                     'description': '57 Markham Street SW3 3NR London',
                     'link': 'Inquire now'
@@ -148,11 +148,11 @@
                   'type': 'Feature',
                   'geometry': {
                     'type': 'Point',
-                    'coordinates': [-0.019, 51.506]
+                    'coordinates': [-0.018, 51.506]
                   },
                   'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
+                    'icon': 'img/practices/map-bupa-dental.png',
+                    'title': 'Clinic Dental Facial',
                     'description': 'Level Zero, Crossrail Pl, London E14 5AR',
                     'link': 'Inquire now'
                   }
@@ -165,7 +165,7 @@
                   },
                   'properties': {
                     'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
+                    'title': 'Bupa Health and Dental Centre Reading',
                     'description': 'Centurion Court, 64 London Road Reading RG1 5AS',
                     'link': 'Inquire now'
                   }
@@ -178,7 +178,7 @@
                   },
                   'properties': {
                     'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
+                    'title': 'Bupa Health and Dental Centre Canary Wharf',
                     'description': '61 Perrymount Rd, Haywards Heath RH16 1DN',
                     'link': 'Inquire now'
                   }
@@ -190,8 +190,8 @@
                     'coordinates': [-0.184, 50.830]
                   },
                   'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
+                    'icon': 'img/practices/map-twentyonedental.svg',
+                    'title': 'TwentyOneDental',
                     'description': '21 New Church Road The City of BN3 4AD',
                     'link': 'Inquire now'
                   }
@@ -201,8 +201,8 @@
             const map = new mapboxgl.Map({
               container: 'map',
               style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
-              center: [-0.007, 51.510],
-              zoom: 10
+              center: [-0.007, 51.170],
+              zoom: 8
             });
             for (const feature of geojson.features) {
               // create a HTML element for each feature
@@ -227,7 +227,7 @@
             var nav = new mapboxgl.NavigationControl();
             map.addControl(nav, 'top-right');
             map.addControl(new mapboxgl.FullscreenControl());
-
+            map.scrollZoom.disable();
           </script>
           <div class="contacts__table">
             <h3>Locations</h3>
