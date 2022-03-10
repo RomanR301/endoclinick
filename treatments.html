@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Endoclinic</title>
+    <title>Endoclinic - Treatments</title>
 
     <!-- Import Style's -->
     <link rel="stylesheet" href="./css/vendor.min.css" />
@@ -12,7 +12,7 @@
   </head>
 
   <body class="treatments-page">
-    <div class="site-container">
+    <div class="site-container no-overflow-container">
       <!-- Header -->
       <header class="header">
         <div class="container">
@@ -117,37 +117,37 @@
                 <i class="icon-arrow-dropdown"></i>
               </button>
               <ul class="dropdown__item">
-                <li class="js-current">
-                  <a href="#treatments-1" data-scroll="treatments-1" class="scroll__link"> Root canal therapy </a>
+                <li class="default-open-item" data-item="root-canal-therapy">
+                  <a href="#treatments-1" class="scroll__link"> Root canal therapy </a>
                 </li>
-                <li>
-                  <a href="#treatments-2" data-scroll="treatments-2" class="scroll__link"> Second opinion with report </a>
+                <li data-item="second-opinion-report">
+                  <a href="#treatments-2" class="scroll__link"> Second opinion with report </a>
                 </li>
-                <li>
-                  <a href="#treatments-3" data-scroll="treatments-3" class="scroll__link"> CBCT Scan </a>
+                <li data-item="cbct-scan">
+                  <a href="#treatments-3" class="scroll__link"> CBCT Scan </a>
                 </li>
-                <li>
+                <li data-item="sedation">
                   <a href="#treatments-4" class="scroll__link"> Sedation </a>
                 </li>
-                <li>
+                <li data-item="metal-free-crowns">
                   <a href="#treatments-5" class="scroll__link"> Metal-free Crown </a>
                 </li>
-                <li>
+                <li data-item="white-composite-fillings">
                   <a href="#treatments-6" class="scroll__link"> White composite fillings </a>
                 </li>
-                <li>
+                <li data-item="root-canal-retreatment">
                   <a href="#treatments-7" class="scroll__link"> Root canal retreatment </a>
                 </li>
-                <li>
+                <li data-item="vital-pulp-treatment">
                   <a href="#treatments-8" class="scroll__link"> Vital pulp treatment </a>
                 </li>
-                <li>
+                <li data-item="regenerative-endodontic-procedures">
                   <a href="#treatments-9" class="scroll__link"> Regenerative endodontic procedures </a>
                 </li>
-                <li>
+                <li data-item="internali-bleaching">
                   <a href="#treatments-10" class="scroll__link"> Internal bleaching </a>
                 </li>
-                <li>
+                <li data-item="extraction">
                   <a href="#treatments-11" class="scroll__link"> Extraction </a>
                 </li>
               </ul>
@@ -197,9 +197,9 @@
                   <p>Our skilled and experienced staff, plus state-of-the-art facilities and the latest in dental technology, mean that patients are in the best possible hands. Pain management is always at the front of our minds.</p>
                   <img src="img/treatments/treatments-single/treatments-single-2.jpg" alt="Treatments preview" />
                 </div>
-                <div id="second-opinion-report"></div>
               </div>
               <div id="treatments-2" class="treatments-content__item">
+                <div id="second-opinion-report"></div>
                 <div class="treatments-content__header">
                   <div class="treatments-content__wrapper">
                     <h3>Second opinion report</h3>
@@ -233,9 +233,9 @@
                   <p>Normally, not at all – though if someone comes to see us with a toothache there might be some minor additional discomfort while we examine the mouth in order to evaluate the situation.</p>
                   <img src="img/treatments/treatments-single/treatments-single-3.jpg" alt="Treatments preview" />
                 </div>
-                <div id="cbct-scan"></div>
               </div>
               <div id="treatments-3" class="treatments-content__item">
+                <div class="anchor-link-to-scroll" id="cbct-scan"></div>
                 <div class="treatments-content__header">
                   <div class="treatments-content__wrapper">
                     <h3>CBCT scan</h3>
@@ -268,9 +268,9 @@
                   <p>There is not normally any pain associated with a CBCT can at all. However, as with all x-rays, women should inform their consultant if they are pregnant.</p>
                   <img src="img/treatments/treatments-single/treatments-single-4.jpg" alt="Treatments preview" />
                 </div>
-                <div id="sedation"></div>
               </div>
               <div id="treatments-4" class="treatments-content__item">
+                <div class="anchor-link-to-scroll" id="sedation"></div>
                 <div class="treatments-content__header">
                   <div class="treatments-content__wrapper">
                     <h3>Sedation</h3>
@@ -303,9 +303,9 @@
                   </p>
                   <img src="img/treatments/treatments-single/treatments-single-5.jpg" alt="Treatments preview" />
                 </div>
-                <div id="metal-free-crowns"></div>
               </div>
               <div id="treatments-5" class="treatments-content__item">
+                <div class="anchor-link-to-scroll" id="metal-free-crowns"></div>
                 <div class="treatments-content__header">
                   <div class="treatments-content__wrapper">
                     <h3>Metal-free crowns</h3>
@@ -338,9 +338,9 @@
                   </p>
                   <img src="img/treatments/treatments-single/treatments-single-6.jpg" alt="Treatments preview" />
                 </div>
-                <div id="white-composite-fillings"></div>
               </div>
               <div id="treatments-6" class="treatments-content__item">
+                <div class="anchor-link-to-scroll" id="white-composite-fillings"></div>
                 <div class="treatments-content__header">
                   <div class="treatments-content__wrapper">
                     <h3>White composite fillings</h3>
@@ -376,9 +376,9 @@
                   </p>
                   <img src="img/treatments/treatments-single/treatments-single-7.jpg" alt="Treatments preview" />
                 </div>
-                <div id="root-canal-retreatment"></div>
               </div>
               <div id="treatments-7" class="treatments-content__item">
+                <div class="anchor-link-to-scroll" id="root-canal-retreatment"></div>
                 <div class="treatments-content__header">
                   <div class="treatments-content__wrapper">
                     <h3>Root canal retreatment</h3>
@@ -624,5 +624,24 @@
 
     <script src="./js/vendor.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+      $(function() {
+          var pgurl = window.location.hash.split('').slice(1).join('');
+          console.log(pgurl)
+          const offsetTop = $('.header').outerHeight() + $('.dropdown__trigger').outerHeight() + 130
+          console.log(offsetTop)
+          if (pgurl === '') {
+            $('.default-open-item').addClass("js-current");
+          }
+            $(".dropdown__item li").each(function(){
+              if ($(this).data("item") === pgurl) {
+                $(this).addClass("js-current");
+                $('html, body').animate({ 
+                  scrollTop: $(`#${pgurl}`).offset().top - offsetTop
+                }, 300);
+              }
+          })
+      });
+    </script>
   </body>
 </html>

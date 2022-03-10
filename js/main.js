@@ -125,6 +125,7 @@ window.onload = function () {
     }
   }); // Variabels
 
+
   var burger = document.querySelector(".burger");
   var header = document.querySelector(".header");
   var technologyCard = document.querySelectorAll('.technology-card'); // let technologyCardBody = document.querySelectorAll('.technology-card__body')
@@ -204,45 +205,14 @@ window.onload = function () {
       header.classList.add("js-scroll-top");
       header.classList.remove("js-scroll-down", "js-nav-open", "js-nav-close");
     }
-  }); // // Tabs
-  // for (let i = 0; i < tabItem.length; i++) {
-  //   tabItem[i].addEventListener("click", () => {
-  //     tabContent.forEach((item) => {
-  //       item.classList.remove("js-active");
-  //     });
-  //     tabItem.forEach((item) => {
-  //       item.classList.remove("js-active");
-  //     });
-  //     tabContent[i].classList.add("js-active");
-  //     tabItem[i].classList.add("js-active");
-  //     tabDropdownTrigger.textContent = document.querySelector(".tabs__trigger.js-active").textContent
-  //   });
-  // }
-  // if (tabDropdownTrigger) {
-  //   tabDropdownTrigger.textContent = document.querySelector(".tabs__trigger.js-active").textContent
-  // }
+  }); 
   // Custom scrollbar in tooth table
 
   OverlayScrollbars(document.querySelectorAll(".tooth"), {}); // Files input
   // let filesTrigger = document.getElementById('file');
 
   var filesTable = document.querySelector('.files__table'); // let updateFilesList = () => {
-  //   let children = "";
-  //   for (let i = 0; i < filesTrigger.files.length; ++i) {
-  //     children +=  '<div class="files__wrapper">' + '<div class="files-item">' + '<i class="icon-file"></i>' + '<span class="files-item__name">' + filesTrigger.files.item(i).name + '</span/>' + '<i class="files-item__remove icon-trash-can" onclick="return this.parentNode.parentNode.remove();"></i>' + '</div>' + '</div>'
-  //   }
-  //   filesTable.innerHTML = children;
-  //   if (children.length >= 0) {
-  //     filesTable.style.display = 'flex'
-  //   } else {
-  //     filesTable.style.display = 'none'
-  //   }
-  // }
-  // if (filesTrigger) {
-  //   filesTrigger.addEventListener("change", () => {
-  //     updateFilesList()
-  //   })
-  // }
+
 
   var dt = new DataTransfer();
   $("#file").on('change', function (e) {
@@ -256,9 +226,7 @@ window.onload = function () {
       });
       fileBloc.append("<div class=\"files-item\"><i class=\"icon-file\"></i><span class=\"files-item__name\">".concat(this.files.item(i).name, "</span><i class=\"files-item__remove icon-trash-can\"></i><div><div>"));
       $(".files__table").append(fileBloc);
-    }
-
-    ;
+    };
 
     var _iterator2 = _createForOfIteratorHelper(this.files),
         _step2;
@@ -298,6 +266,17 @@ window.onload = function () {
   }); // Media 992 =====>
 
   if (window.matchMedia("(min-width: 992px)").matches) {
+
+    $('.technology__wrapper').click(function () {
+      $(".technology__wrapper").not($(this).closest(".technology__wrapper")).removeClass("js-active");
+      $(this).closest(".technology__wrapper").addClass("js-active");
+
+      if ($(this).hasClass('js-active')) {
+        $('.technology-card__body').not($(this).find('.technology-card__body')).slideUp(300);
+        $(this).find('.technology-card__body').slideDown(300);
+      }
+    })
+
     // Opening desktop menu with burger
     burger.addEventListener("click", function () {
       if (header.classList.contains("js-nav-open")) {
@@ -317,20 +296,8 @@ window.onload = function () {
         $('.technology-card__body').not($(this).find('.technology-card__body')).slideUp(300);
         $(this).find('.technology-card__body').slideDown(300);
       }
-    }); // for (let i = 0; i < technologyCard.length; i++) {
-    //   technologyCard[i].addEventListener("click", () => {
-    //     technologyCard.forEach((element) => {
-    //       element.classList.remove("js-active");
-    //     });
-    //     // technologyCardBody.forEach((element) => {
-    //     //   slideUp(element)
-    //     // });
-    //     technologyCard[i].classList.add('js-active');
-    //     // Add class to the element that was clicked
-    //     slideDown(technologyCardBody[i], 300)
-    //   });
-    // }
-
+    }); 
+    
     var horizontalScroll = document.querySelector('.horizontal-scroll');
 
     if (horizontalScroll) {
@@ -383,6 +350,30 @@ window.onload = function () {
     }
   } else {
     (function () {
+
+      $('.technology__wrapper').click(function () {
+        $(".technology__wrapper").not($(this).closest(".technology__wrapper")).removeClass("js-active");
+        $(this).closest(".technology__wrapper").addClass("js-active");
+  
+        if ($(this).hasClass('js-active')) {
+          $('.technology-card__body').not($(this).find('.technology-card__body')).show();
+          $(this).find('.technology-card__body').show();
+        }
+      })
+      var _loop3 = function _loop3(_i3) {
+        technologyCard[_i3].addEventListener("click", function () {
+          // Remove class from all elements
+          technologyCard.forEach(function (element) {
+            element.classList.remove("js-active");
+          }); // Add class to the element that was clicked
+
+          technologyCard[_i3].classList.add("js-active");
+        });
+      };
+
+      for (var _i3 = 0; _i3 < technologyCard.length; _i3++) {
+        _loop3(_i3);
+      } 
       // Toggle visible elements
       var showTrigger = document.querySelectorAll(".show__trigger");
       var showItem = document.querySelectorAll(".show__item");
@@ -434,32 +425,8 @@ window.onload = function () {
         } finally {
           _iterator3.f();
         }
-      } // Treatments page tabs navigation
-      // let treatmentsDropdown = document.querySelector(".treatments .dropdown");
-      // let treatmentsDropdownList = document.querySelector(".treatments .dropdown__list");
-      // if (treatmentsDropdown && treatmentsDropdownList) {
-      //   let offsetItem = document.querySelector('.dropdown__list').offsetHeight
-      //   document.documentElement.style.setProperty("--treatments-dropdown-offset", offsetItem + "px")
-      //   window.addEventListener("scroll", () => {
-      //     if (window.scrollY > offsetItem + 64 ) {
-      //       treatmentsDropdown.classList.add("js-scroll-down");
-      //       treatmentsDropdownList.style.display = 'none'
-      //       document.querySelector('.treatments').classList.add("offset-top")
-      //     } else {
-      //       treatmentsDropdown.classList.remove("js-scroll-down");
-      //       treatmentsDropdownList.style.display = 'block'
-      //       document.querySelector('.treatments').classList.remove("offset-top")
-      //     }
-      //   });
-      //   treatmentsDropdown.addEventListener('click', () => {
-      //     if (treatmentsDropdown.classList.contains("js-scroll-down")) {
-      //       slideToggle(treatmentsDropdownList, 300);
-      //     } else {
-      //       null
-      //     }
-      //   });
-      // }
-
+      }
+    
 
       if (treatmentsDropdownTrigger && treatmentsDropdownItem) {
         var offsetItem = treatmentsDropdownItem.offsetHeight;
@@ -505,25 +472,29 @@ window.onload = function () {
       burger.addEventListener("click", function () {
         header.classList.toggle("js-nav-open");
         document.body.classList.toggle("js-lock");
-      }); // Opening technology accordions !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      }); 
+      
+      // Opening technology accordions !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       // $('.technology__wrapper .technology-card').not($('.technology__wrapper.secondary .technology-card')).removeClass('js-active')
 
-      var _loop3 = function _loop3(_i3) {
-        technologyCard[_i3].addEventListener("click", function () {
-          // Remove class from all elements
-          technologyCard.forEach(function (element) {
-            element.classList.remove("js-active");
-          }); // Add class to the element that was clicked
+      // var _loop3 = function _loop3(_i3) {
+      //   technologyCard[_i3].addEventListener("click", function () {
+      //     technologyCard.forEach(function (element) {
+      //       element.classList.remove("js-active");
+      //     });
 
-          technologyCard[_i3].classList.add("js-active");
-        });
-      };
+      //     technologyCard[_i3].classList.add("js-active");
+      //   });
+      // };
 
-      for (var _i3 = 0; _i3 < technologyCard.length; _i3++) {
-        _loop3(_i3);
-      } // Block slider 'Treatments'
+      // for (var _i3 = 0; _i3 < technologyCard.length; _i3++) {
+      //   _loop3(_i3);
+      // } 
+      
 
 
+      
+      // Block slider 'Treatments'
       var sliderTreatments = new Swiper('.treatments-slider', {
         slidesPerView: 1,
         spaceBetween: 30,
