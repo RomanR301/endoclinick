@@ -342,6 +342,11 @@ button {
 .mapboxgl-popup {
   max-width: 400px!important;
 }
+@media (max-width: 768px) {
+  .mapboxgl-popup {
+    max-width:unset!important;
+  }
+}
 .popup-header {
   margin-bottom: 8px;
   display: flex;
@@ -410,13 +415,18 @@ h2 {
   line-height: 1.2;
 }
 
-p {
+p, em {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
 }
-
+em {
+  display: block;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
 .btn-primary {
   background: #AEE2CE;
   text-decoration: none;
@@ -1728,6 +1738,16 @@ p {
   border-radius: 10px;
   overflow: hidden;
 }
+.technology-card ul {
+  list-style: initial;
+}
+.technology-card ul li {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
 /* .technology-card__image {
   height: 100%;
 } */
@@ -1976,7 +1996,6 @@ p {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ffffff;
-  text-transform: uppercase;
 }
 
 .refering.about .about-text p {

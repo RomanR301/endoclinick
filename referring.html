@@ -1,1336 +1,1251 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endoclinic - Referring dentist</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endoclinic - Referring dentist</title>
+    <!-- Import Style's -->
+    <link rel="stylesheet" href="./css/vendor.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
 
-  <!-- Import Style's -->
-  <link rel="stylesheet" href="./css/vendor.min.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-</head>
-
-<body class="refering">
-
-  <div class="site-container">
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <picture>
-            <source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="Logo of Endoclinic">
-          </picture>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list menu">
-            <li class="nav__item menu-item ">
-              <a href="treatments.html" class="nav__link">
-                <span class="symbol">Tr</span>
-                <span class="number">34</span>
-                <span class="title">Treatments</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="about.html" class="nav__link">
-                <span class="symbol">Ab</span>
-                <span class="number">27</span>
-                <span class="title">About us</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="technology.html" class="nav__link">
-                <span class="symbol">Te</span>
-                <span class="number">11</span>
-                <span class="title">Technology</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item plug">
-              <a href="" class="nav__link">
-                <span class="symbol"></span>
-                <span class="number"></span>
-                <span class="title"></span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="contacts.html" class="nav__link">
-                <span class="symbol">Co</span>
-                <span class="number">44</span>
-                <span class="title">Contact</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="contacts.html" class="nav__link">
-                <span class="symbol">Lo</span>
-                <span class="number">31</span>
-                <span class="title">Locations</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button class="burger">
-          <span class="burger__wrapper">
-            <span class="burger__line"></span>
-          </span>
-        </button>
-        <div class="header-contacts">
-          <ul class="header-contacts__list">
-            <li class="header-contacts__item">
-              <a href="#contacts-form" class="header-contacts__link scroll__link">
-                <i class="icon-user-arrow"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="header-content">
-          <div class="container">
-            <ul class="header-content__list">
-              <li class="header-content__item">
-                57 Markham Street SW3 3NR London
+  <body class="refering">
+    <div class="site-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <picture>
+              <source srcset="img/logo.svg" type="image/webp" />
+              <img src="img/logo.svg" alt="Logo of Endoclinic" />
+            </picture>
+          </a>
+          <nav class="nav">
+            <ul class="nav__list menu">
+              <li class="nav__item menu-item">
+                <a href="treatments.html" class="nav__link">
+                  <span class="symbol">Tr</span>
+                  <span class="number">34</span>
+                  <span class="title">Treatments</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                Level Zero, Crossrail Pl, London E14 5AR
+              <li class="nav__item menu-item">
+                <a href="about.html" class="nav__link">
+                  <span class="symbol">Ab</span>
+                  <span class="number">27</span>
+                  <span class="title">About us</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                Centurion Court, 64 London Road Reading RG1 5AS
+              <li class="nav__item menu-item">
+                <a href="technology.html" class="nav__link">
+                  <span class="symbol">Te</span>
+                  <span class="number">11</span>
+                  <span class="title">Technology</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                61 Perrymount Rd, Haywards Heath RH16 1DN
+              <li class="nav__item menu-item plug">
+                <a href="" class="nav__link">
+                  <span class="symbol"></span>
+                  <span class="number"></span>
+                  <span class="title"></span>
+                </a>
               </li>
-              <li class="header-content__item">
-                21 New Church Road The City of BN3 4AD
+              <li class="nav__item menu-item">
+                <a href="contacts.html" class="nav__link">
+                  <span class="symbol">Co</span>
+                  <span class="number">44</span>
+                  <span class="title">Contact</span>
+                </a>
+              </li>
+              <li class="nav__item menu-item">
+                <a href="contacts.html" class="nav__link">
+                  <span class="symbol">Lo</span>
+                  <span class="number">31</span>
+                  <span class="title">Locations</span>
+                </a>
               </li>
             </ul>
-            <div class="header-content__footer">
-              <a href="tel:020 3627 5732" class="header-content__link">020 3627 5732</a>
-              <a href="referring.html" class="btn-secondary">
-                Referring dentist?
-              </a>
-            </div>
+          </nav>
+          <button class="burger">
+            <span class="burger__wrapper">
+              <span class="burger__line"></span>
+            </span>
+          </button>
+          <div class="header-contacts">
+            <ul class="header-contacts__list">
+              <li class="header-contacts__item">
+                <a href="#contacts-form" class="header-contacts__link scroll__link">
+                  <i class="icon-user-arrow"></i>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <!-- Hero -->
-      <section class="refering hero">
-        <div class="overlay"></div>
-        <div class="container">
-          <h1>A dental partner you can rely on</h1>
-          <p>Refer your patient to The Endodontic Clinic and you'll be helping them to receive the very best in root
-            canal therapy</p>
-          <a href="#" class="btn-primary">
-            Enquire now
-          </a>
-        </div>
-        <picture>
-          <source srcset="img/hero-background.webp" type="image/webp"><img src="img/hero-background.png"
-            alt="Background image" class="hero__background">
-        </picture>
-      </section>
-      <!-- About -->
-      <section class="refering about">
-        <div class="container">
-          <div class="section-header">
-            <h2>About us</h2>
-          </div>
-          <div class="about-table">
-            <div class="about__photo">
-              <picture>
-                <source srcset="img/about/about-photo-4.webp" type="image/webp">
-                <img src="img/about/about-photo-4.jpg" alt="Us Photo">
-              </picture>
-            </div>
-            <div class="about-text">
-              <h2>Dr. El Jabouri</h2>
-              <p>
-                The Endodontic Clinic was founded by Dr Jassar El Jabouri, a highly sought-after endodontics surgeon who
-                is committed to excellence within this specialised field of dentistry.
-              </p>
-              <p>
-                During his career, Dr El Jabouri has performed more than 7,500 endodontic treatments using orascoptic
-                loupes and/or microscope – he currently uses a state-of-the-art <strong>Carl Zeiss microscope</strong>,
-                widely recognised as the finest instrument of its kind. The latest technology available to the dental
-                profession features prominently in The Endodontic Clinic approach.
-              </p>
-              <p>
-                Having first qualified as a dentist at Radboud University Nijmegen in The Netherlands in 2003, Dr El
-                Jabouri was quickly drawn to endodontics, a specialism in which he has now excelled for more than 15
-                years.
-              </p>
-              <p>
-                His professional appointments and achievements include:
-              </p>
-              <ul>
-                <li>
-                  <h4>2004</h4>
-                  <p>founded MMC Dental Group</p>
-                </li>
-                <li>
-                  <h4>2006</h4>
-                  <p>started using Kaps endodontic microscopes and accepting referrals from 35 dentists within the
-                    dental group</p>
-                </li>
-                <li>
-                  <h4>2010-2013</h4>
-                  <p>lectured and Head of department at The Dental Nursing Academy</p>
-                </li>
-                <li>
-                  <h4>2015-2018</h4>
-                  <p>Clinical Director at MyHealthcare Clinic</p>
-                </li>
-                <li>
-                  <h4>2018</h4>
-                  <p>practice limited to endodontics, accepting referrals from over 60 dentists</p>
-                </li>
-                <li>
-                  <h4>2019</h4>
-                  <p>introduction of bioceramic sealers as a standard method for obturation for all endodontic
-                    treatments</p>
-                </li>
-                <li>
-                  <h4>2019</h4>
-                  <p>the first endodontic regenerative case completed using the patient’s stem cells’ ability to heal
-                    and further complete root formation</p>
-                </li>
-                <li>
-                  <h4>2020</h4>
-                  <p>introduction of sonic and ultrasonic powered irrigation</p>
-                </li>
+          <div class="header-content">
+            <div class="container">
+              <ul class="header-content__list">
+                <li class="header-content__item">57 Markham Street, London SW3 3NR</li>
+                <li class="header-content__item">Level Zero, Crossrail Pl, London E14 5AR</li>
+                <li class="header-content__item">Centurion Court, 64 London Road Reading RG1 5AS</li>
+                <li class="header-content__item">61 Perrymount Rd, Haywards Heath RH16 1DN</li>
+                <li class="header-content__item">21 New Church Road The City of BN3 4AD</li>
               </ul>
-              <p>
-                Dr El Jabouri is a member of both the British Endodontic Society and The American Association of
-                Endodontists.
-              </p>
-              <div class="about-progress-table">
-                <div class="about-progress-wrapper">
-                  <div class="about-progress__item">
-                    <picture>
-                      <source srcset="img/about/about-progress-1.webp" type="image/webp"><img
-                        src="img/about/about-progress-1.png" alt="About Progress">
-                    </picture>
-                  </div>
-                </div>
-                <div class="about-progress-wrapper">
-                  <div class="about-progress__item">
-                    <picture>
-                      <source srcset="img/about/about-progress-2.webp" type="image/webp"><img
-                        src="img/about/about-progress-2.png" alt="About Progress">
-                    </picture>
-                  </div>
-                </div>
+              <div class="header-content__footer">
+                <a href="tel:020 3627 5732" class="header-content__link">020 3627 5732</a>
+                <a href="referring.html" class="btn-secondary"> Referring dentist? </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Promise -->
-      <section class="promise">
-        <div class="container">
-          <div class="section-header">
-            <h2>Our promise</h2>
+      </header>
+      <main>
+        <!-- Hero -->
+        <section class="refering hero">
+          <div class="overlay"></div>
+          <div class="container">
+            <h1>A dental partner you can rely on</h1>
+            <p>Refer your patient to The Endodontic Clinic and you'll be helping them to receive the very best in root canal therapy</p>
+            <a href="#contacts-form" class="btn-primary scroll__link"> Refer now </a>
           </div>
-          <p>Having already worked with well over 100 referring dentists, Dr El Jabouri has developed a referral process
-            that is quick and easy.</p>
-          <p>Furthermore, all referrals to The Endodontic Clinic come with a four-pronged guarantee:</p>
-          <div class="promise__table">
-            <div class="promise__wrapper">
-              <div class="promise__card">
-                <div class="icon">
-                  <picture>
-                    <source srcset="img/icons/list.svg" type="image/webp"><img src="img/icons/list.svg" alt="Icon List">
-                  </picture>
-                </div>
+          <picture>
+            <source srcset="img/hero-background.webp" type="image/webp" />
+            <img src="img/hero-background.png" alt="Background image" class="hero__background" />
+          </picture>
+        </section>
+        <!-- About -->
+        <section class="refering about">
+          <div class="container">
+            <div class="about-table">
+              <div class="about__photo">
+                <picture>
+                  <source srcset="img/about/about-photo-4.webp" type="image/webp" />
+                  <img src="img/about/about-photo-4.jpg" alt="Us Photo" />
+                </picture>
+              </div>
+              <div class="about-text">
+                <h2>Introducing Dr Jassar El Jabouri</h2>
+                <p>The Endodontic Clinic was founded by Dr Jassar El Jabouri, a highly sought-after endodontics surgeon who is committed to excellence within this specialised field of dentistry.</p>
                 <p>
-                  That we will provide a full report to the referring dentist.
+                  During his career, Dr El Jabouri has performed more than 7,500 endodontic treatments using orascoptic loupes and/or microscope – he currently uses a state-of-the-art <strong>Carl Zeiss microscope</strong>, widely recognised as the
+                  finest instrument of its kind. The latest technology available to the dental profession features prominently in The Endodontic Clinic approach.
                 </p>
-              </div>
-            </div>
-            <div class="promise__wrapper">
-              <div class="promise__card">
-                <div class="icon">
-                  <picture>
-                    <source srcset="img/icons/message.svg" type="image/webp"><img src="img/icons/message.svg"
-                      alt="Icon Message">
-                  </picture>
-                </div>
-                <p>
-                  That we will discuss any changes to the initial diagnosis with the referring dentist before
-                  proceeding.
-                </p>
-              </div>
-            </div>
-            <div class="promise__wrapper">
-              <div class="promise__card">
-                <div class="icon">
-                  <picture>
-                    <source srcset="img/icons/warning.svg" type="image/webp"><img src="img/icons/warning.svg"
-                      alt="Icon Warning">
-                  </picture>
-                </div>
-                <p>
-                  That we will not undertake any additional dental work before gaining permission from the referring
-                  dentist.
-                </p>
-              </div>
-            </div>
-            <div class="promise__wrapper">
-              <div class="promise__card">
-                <div class="icon">
-                  <picture>
-                    <source srcset="img/icons/swap.svg" type="image/webp"><img src="img/icons/swap.svg" alt="Icon Swap">
-                  </picture>
-                </div>
-                <p>
-                  That the patient will be directed back to the referring dentist once treatment is complete.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Cases -->
-      <section class="cases">
-        <div class="container">
-          <div class="section-header">
-            <h2>Our cases</h2>
-          </div>
-          <p>It's not always easy to know when you should refer a patient, especially with something as complex as
-            endodontics. We usually recommend referral of patients who fall under complexity codes 2 and 3 based on the
-            Restorative Index of Treatment Need (RIOTN) (FDS RCS Eng)</p>
-          <div class="swiper cases-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide cases-slide">
-                <div class="card">
-                  <div class="card__image">
-                    <picture>
-                      <source srcset="img/cases/cases-1.webp" type="image/webp"><img src="img/cases/cases-1.png"
-                        alt="cases Preview">
-                    </picture>
+                <p>Having first qualified as a dentist at Radboud University Nijmegen in The Netherlands in 2003, Dr El Jabouri was quickly drawn to endodontics, a specialism in which he has now excelled for more than 15 years.</p>
+                <p>His professional appointments and achievements include:</p>
+                <ul>
+                  <li>
+                    <h4>2004</h4>
+                    <p>Founded MMC Dental Group</p>
+                  </li>
+                  <li>
+                    <h4>2006</h4>
+                    <p>Started using Kaps endodontic microscopes and accepting referrals from 35 dentists within the dental group</p>
+                  </li>
+                  <li>
+                    <h4>2010-2013</h4>
+                    <p>Lectured and Head of department at The Dental Nursing Academy</p>
+                  </li>
+                  <li>
+                    <h4>2015-2018</h4>
+                    <p>Clinical Director at MyHealthcare Clinic</p>
+                  </li>
+                  <li>
+                    <h4>2018</h4>
+                    <p>Practice limited to endodontics, accepting referrals from over 60 dentists</p>
+                  </li>
+                  <li>
+                    <h4>2019</h4>
+                    <p>Introduction of bioceramic sealers as a standard method for obturation for all endodontic treatments</p>
+                  </li>
+                  <li>
+                    <h4>2019</h4>
+                    <p>The first endodontic regenerative case completed using the patient’s stem cells’ ability to heal and further complete root formation</p>
+                  </li>
+                  <li>
+                    <h4>2020</h4>
+                    <p>Introduction of sonic and ultrasonic powered irrigation</p>
+                  </li>
+                </ul>
+                <p>Dr El Jabouri is a member of both the British Endodontic Society and The American Association of Endodontists.</p>
+                <div class="about-progress-table">
+                  <div class="about-progress-wrapper">
+                    <div class="about-progress__item">
+                      <picture>
+                        <source srcset="img/about/about-progress-1.webp" type="image/webp" />
+                        <img src="img/about/about-progress-1.png" alt="About Progress" />
+                      </picture>
+                    </div>
                   </div>
-                  <div class="card__text">
-                    <h3>Lorem ipsum</h3>
+                  <div class="about-progress-wrapper">
+                    <div class="about-progress__item">
+                      <picture>
+                        <source srcset="img/about/about-progress-2.webp" type="image/webp" />
+                        <img src="img/about/about-progress-2.png" alt="About Progress" />
+                      </picture>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide cases-slide">
-                <div class="card">
-                  <div class="card__image">
-                    <picture>
-                      <source srcset="img/cases/cases-2.webp" type="image/webp"><img src="img/cases/cases-2.png"
-                        alt="cases Preview">
-                    </picture>
-                  </div>
-                  <div class="card__text">
-                    <h3>Lorem ipsum</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide cases-slide">
-                <div class="card">
-                  <div class="card__image">
-                    <picture>
-                      <source srcset="img/cases/cases-1.webp" type="image/webp"><img src="img/cases/cases-1.png"
-                        alt="cases Preview">
-                    </picture>
-                  </div>
-                  <div class="card__text">
-                    <h3>Lorem ipsum</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide cases-slide">
-                <div class="card">
-                  <div class="card__image">
-                    <picture>
-                      <source srcset="img/cases/cases-2.webp" type="image/webp"><img src="img/cases/cases-2.png"
-                        alt="cases Preview">
-                    </picture>
-                  </div>
-                  <div class="card__text">
-                    <h3>Lorem ipsum</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-navigation">
-              <div class="swiper-button-prev cases-button-prev">
-                <button class="link-primary">
-                  <span class="link-primary__circle">
-                    <span class="link-primary__arrow"></span>
-                  </span>
-                </button>
-              </div>
-              <div class="swiper-pagination cases-pagination"></div>
-              <div class="swiper-button-next cases-button-next">
-                <button class="link-primary">
-                  <span class="link-primary__circle">
-                    <span class="link-primary__arrow"></span>
-                  </span>
-                </button>
               </div>
             </div>
           </div>
-          <div class="cases__contact">
+        </section>
+        <!-- Promise -->
+        <section class="promise">
+          <div class="container">
+            <div class="section-header">
+              <h2>Our promise</h2>
+            </div>
+            <p>Having already worked with well over 100 referring dentists, Dr El Jabouri has developed a referral process that is quick and easy.</p>
+            <p>Furthermore, all referrals to The Endodontic Clinic come with a four-pronged guarantee:</p>
+            <div class="promise__table">
+              <div class="promise__wrapper">
+                <div class="promise__card">
+                  <div class="icon">
+                    <picture>
+                      <source srcset="img/icons/list.svg" type="image/webp" />
+                      <img src="img/icons/list.svg" alt="Icon List" />
+                    </picture>
+                  </div>
+                  <p>That we will provide a full report to the referring dentist.</p>
+                </div>
+              </div>
+              <div class="promise__wrapper">
+                <div class="promise__card">
+                  <div class="icon">
+                    <picture>
+                      <source srcset="img/icons/message.svg" type="image/webp" />
+                      <img src="img/icons/message.svg" alt="Icon Message" />
+                    </picture>
+                  </div>
+                  <p>That we will discuss any changes to the initial diagnosis with the referring dentist before proceeding.</p>
+                </div>
+              </div>
+              <div class="promise__wrapper">
+                <div class="promise__card">
+                  <div class="icon">
+                    <picture>
+                      <source srcset="img/icons/warning.svg" type="image/webp" />
+                      <img src="img/icons/warning.svg" alt="Icon Warning" />
+                    </picture>
+                  </div>
+                  <p>That we will not undertake any additional dental work before gaining permission from the referring dentist.</p>
+                </div>
+              </div>
+              <div class="promise__wrapper">
+                <div class="promise__card">
+                  <div class="icon">
+                    <picture>
+                      <source srcset="img/icons/swap.svg" type="image/webp" />
+                      <img src="img/icons/swap.svg" alt="Icon Swap" />
+                    </picture>
+                  </div>
+                  <p>That the patient will be directed back to the referring dentist once treatment is complete.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Cases -->
+        <section class="cases">
+          <div class="container">
+            <div class="section-header">
+              <h2>Our cases</h2>
+            </div>
             <p>
-              Some modifying factors can also increase the need for referral, including endodontic retreatment,
-              difficult access and the patient’s medical history. If you are unsure about whether to refer, we are happy
-              to advise you either by phone or email.
+              It's not always easy to know when you should refer a patient, especially with something as complex as endodontics. We usually recommend referral of patients who fall under complexity codes 2 and 3 based on the Restorative Index of
+              Treatment Need (RIOTN) (FDS RCS Eng)
             </p>
-            <a href="#" class="btn-primary">
-              Contact us
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- Socials -->
-      <section class="socials">
-        <div class="container">
-          <div class="section-header">
-            <h2>Socials</h2>
-          </div>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a href="#" class="socials__link">
-                LinkedIn
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link">
-                Instagram
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link">
-                Facebook
-              </a>
-            </li>
-          </ul>
-          <div class="swiper socials__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide socials__slide">
-                <div class="socials__card">
-                  <picture>
-                    <source srcset="img/socials/socials-1.webp" type="image/webp"><img src="img/socials/socials-1.png"
-                      alt="Social preview">
-                  </picture>
+            <div class="swiper cases-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide cases-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="img/cases/cases-1.webp" type="image/webp" />
+                        <img src="img/cases/cases-1.png" alt="cases Preview" />
+                      </picture>
+                    </div>
+                    <div class="card__text">
+                      <h3>Lorem ipsum</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide cases-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="img/cases/cases-2.webp" type="image/webp" />
+                        <img src="img/cases/cases-2.png" alt="cases Preview" />
+                      </picture>
+                    </div>
+                    <div class="card__text">
+                      <h3>Lorem ipsum</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide cases-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="img/cases/cases-1.webp" type="image/webp" />
+                        <img src="img/cases/cases-1.png" alt="cases Preview" />
+                      </picture>
+                    </div>
+                    <div class="card__text">
+                      <h3>Lorem ipsum</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide cases-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="img/cases/cases-2.webp" type="image/webp" />
+                        <img src="img/cases/cases-2.png" alt="cases Preview" />
+                      </picture>
+                    </div>
+                    <div class="card__text">
+                      <h3>Lorem ipsum</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide socials__slide">
-                <div class="socials__card">
-                  <picture>
-                    <source srcset="img/socials/socials-2.webp" type="image/webp"><img src="img/socials/socials-2.png"
-                      alt="Social preview">
-                  </picture>
+              <div class="swiper-navigation">
+                <div class="swiper-button-prev cases-button-prev">
+                  <button class="link-primary">
+                    <span class="link-primary__circle">
+                      <span class="link-primary__arrow"></span>
+                    </span>
+                  </button>
                 </div>
-              </div>
-              <div class="swiper-slide socials__slide">
-                <div class="socials__card">
-                  <picture>
-                    <source srcset="img/socials/socials-3.webp" type="image/webp"><img src="img/socials/socials-3.png"
-                      alt="Social preview">
-                  </picture>
-                </div>
-              </div>
-              <div class="swiper-slide socials__slide">
-                <div class="socials__card">
-                  <picture>
-                    <source srcset="img/socials/socials-4.webp" type="image/webp"><img src="img/socials/socials-4.png"
-                      alt="Social preview">
-                  </picture>
-                </div>
-              </div>
-              <div class="swiper-slide socials__slide">
-                <div class="socials__card">
-                  <picture>
-                    <source srcset="img/socials/socials-1.webp" type="image/webp"><img src="img/socials/socials-1.png"
-                      alt="Social preview">
-                  </picture>
-                </div>
-              </div>
-              <div class="swiper-slide socials__slide">
-                <div class="socials__card">
-                  <picture>
-                    <source srcset="img/socials/socials-2.webp" type="image/webp"><img src="img/socials/socials-2.png"
-                      alt="Social preview">
-                  </picture>
+                <div class="swiper-pagination cases-pagination"></div>
+                <div class="swiper-button-next cases-button-next">
+                  <button class="link-primary">
+                    <span class="link-primary__circle">
+                      <span class="link-primary__arrow"></span>
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="swiper-navigation">
-              <div class="swiper-button-prev socials-button-prev">
-                <button class="link-primary">
-                  <span class="link-primary__circle">
-                    <span class="link-primary__arrow"></span>
-                  </span>
-                </button>
+            <div class="cases__contact">
+              <p>
+                Some modifying factors can also increase the need for referral, including endodontic retreatment, difficult access and the patient’s medical history. If you are unsure about whether to refer, we are happy to advise you either by phone
+                or email.
+              </p>
+              <a href="#" class="btn-primary"> Contact us </a>
+            </div>
+          </div>
+        </section>
+        <!-- Socials -->
+        <section class="socials">
+          <div class="container">
+            <div class="section-header">
+              <h2>Socials</h2>
+            </div>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a href="#" class="socials__link"> LinkedIn </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link"> Instagram </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" class="socials__link"> Facebook </a>
+              </li>
+            </ul>
+            <div class="swiper socials__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide socials__slide">
+                  <div class="socials__card">
+                    <picture>
+                      <source srcset="img/socials/socials-1.webp" type="image/webp" />
+                      <img src="img/socials/socials-1.png" alt="Social preview" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide socials__slide">
+                  <div class="socials__card">
+                    <picture>
+                      <source srcset="img/socials/socials-2.webp" type="image/webp" />
+                      <img src="img/socials/socials-2.png" alt="Social preview" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide socials__slide">
+                  <div class="socials__card">
+                    <picture>
+                      <source srcset="img/socials/socials-3.webp" type="image/webp" />
+                      <img src="img/socials/socials-3.png" alt="Social preview" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide socials__slide">
+                  <div class="socials__card">
+                    <picture>
+                      <source srcset="img/socials/socials-4.webp" type="image/webp" />
+                      <img src="img/socials/socials-4.png" alt="Social preview" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide socials__slide">
+                  <div class="socials__card">
+                    <picture>
+                      <source srcset="img/socials/socials-1.webp" type="image/webp" />
+                      <img src="img/socials/socials-1.png" alt="Social preview" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide socials__slide">
+                  <div class="socials__card">
+                    <picture>
+                      <source srcset="img/socials/socials-2.webp" type="image/webp" />
+                      <img src="img/socials/socials-2.png" alt="Social preview" />
+                    </picture>
+                  </div>
+                </div>
               </div>
-              <div class="swiper-pagination socials-pagination"></div>
-              <div class="swiper-button-next socials-button-next">
-                <button class="link-primary">
-                  <span class="link-primary__circle">
-                    <span class="link-primary__arrow"></span>
-                  </span>
-                </button>
+              <div class="swiper-navigation">
+                <div class="swiper-button-prev socials-button-prev">
+                  <button class="link-primary">
+                    <span class="link-primary__circle">
+                      <span class="link-primary__arrow"></span>
+                    </span>
+                  </button>
+                </div>
+                <div class="swiper-pagination socials-pagination"></div>
+                <div class="swiper-button-next socials-button-next">
+                  <button class="link-primary">
+                    <span class="link-primary__circle">
+                      <span class="link-primary__arrow"></span>
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Locations -->
-      <section class="locations">
-        <div class="container">
-          <div class="section-header">
-            <h2>Locations</h2>
-            <a href="#" class="link-primary">
-              <span class="link-primary__title">See more</span>
-              <span class="link-primary__circle">
-                <span class="link-primary__arrow"></span>
-              </span>
-            </a>
-          </div>
-          <div id="map"></div>
-          <script>
-            mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw';
+        </section>
+        <!-- Locations -->
+        <section class="locations">
+          <div class="container">
+            <div class="section-header">
+              <h2>Locations</h2>
+              <!-- <a href="#" class="link-primary">
+                <span class="link-primary__title">See more</span>
+                <span class="link-primary__circle">
+                  <span class="link-primary__arrow"></span>
+                </span>
+              </a> -->
+            </div>
+            <div id="map"></div>
+            <script>
+              mapboxgl.accessToken = "pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw";
 
-            const geojson = {
-              'type': 'FeatureCollection',
-              'features': [
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.138, 51.488]
+              const geojson = {
+                type: "FeatureCollection",
+                features: [
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.138, 51.488],
+                    },
+                    properties: {
+                      icon: "img/map-icon-bupa.svg",
+                      title: "Chelsea Green Dental",
+                      description: "57 Markham Street SW3 3NR London",
+                      link: "Inquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': '57 Markham Street SW3 3NR London',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.019, 51.506]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.019, 51.506],
+                    },
+                    properties: {
+                      icon: "img/map-icon-bupa.svg",
+                      title: "Chelsea Green Dental",
+                      description: "Level Zero, Crossrail Pl, London E14 5AR",
+                      link: "Inquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': 'Level Zero, Crossrail Pl, London E14 5AR',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.395, 51.534]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.395, 51.534],
+                    },
+                    properties: {
+                      icon: "img/map-icon-bupa.svg",
+                      title: "Chelsea Green Dental",
+                      description: "Centurion Court, 64 London Road Reading RG1 5AS",
+                      link: "Inquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': 'Centurion Court, 64 London Road Reading RG1 5AS',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.103, 51.006]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.103, 51.006],
+                    },
+                    properties: {
+                      icon: "img/map-icon-bupa.svg",
+                      title: "Chelsea Green Dental",
+                      description: "61 Perrymount Rd, Haywards Heath RH16 1DN",
+                      link: "Inquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': '61 Perrymount Rd, Haywards Heath RH16 1DN',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.184, 50.830]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.184, 50.83],
+                    },
+                    properties: {
+                      icon: "img/map-icon-bupa.svg",
+                      title: "Chelsea Green Dental",
+                      description: "21 New Church Road The City of BN3 4AD",
+                      link: "Inquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': '21 New Church Road The City of BN3 4AD',
-                    'link': 'Inquire now'
-                  }
-                }
-              ]
-            };
-            const map = new mapboxgl.Map({
-              container: 'map',
-              style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
-              center: [-0.007, 51.510],
-              zoom: 10
-            });
-            for (const feature of geojson.features) {
-              // create a HTML element for each feature
-              const el = document.createElement('div');
-              el.className = 'marker';
-              // make a marker for each feature and add it to the map
-              new mapboxgl.Marker(el)
-                .setLngLat(feature.geometry.coordinates)
-                .setPopup(
-                  new mapboxgl.Popup({ offset: 25 }) // add popups
-                    .setHTML(
-                      `<div class="popup-header">
+                ],
+              };
+              const map = new mapboxgl.Map({
+                container: "map",
+                style: "mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g",
+                center: [-0.007, 51.51],
+                zoom: 10,
+              });
+              for (const feature of geojson.features) {
+                // create a HTML element for each feature
+                const el = document.createElement("div");
+                el.className = "marker";
+                // make a marker for each feature and add it to the map
+                new mapboxgl.Marker(el)
+                  .setLngLat(feature.geometry.coordinates)
+                  .setPopup(
+                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                      .setHTML(
+                        `<div class="popup-header">
                         <img src="${feature.properties.icon}">
                         <div class="popup__title">${feature.properties.title}</div>
                       </div>
                       <p>${feature.properties.description}</p>
                       <a href="#">${feature.properties.link}</a>`
-                    )
-                )
-                .addTo(map);
-            }
-            var nav = new mapboxgl.NavigationControl();
-            map.addControl(nav, 'top-right');
-            map.addControl(new mapboxgl.FullscreenControl());
-
-          </script>
-
-        </div>
-      </section>
-      <!-- Contacts -->
-      <section id="contacts-form" class="contacts-form">
-        <div class="container">
-          <div class="section-header">
-            <h2>Refer a patient</h2>
+                      )
+                  )
+                  .addTo(map);
+              }
+              var nav = new mapboxgl.NavigationControl();
+              map.addControl(nav, "top-right");
+              map.addControl(new mapboxgl.FullscreenControl());
+            </script>
           </div>
+        </section>
+        <!-- Contacts -->
+        <section id="contacts-form" class="contacts-form">
+          <div class="container">
+            <div class="section-header">
+              <h2>Refer a patient</h2>
+            </div>
             <form action="sendEmailReferring.php" method="POST" class="form" enctype="multipart/form-data">
-            <div class="form__table">
-              <div class="form-wrapper">
-                <h3>Referring dentist</h3>
-                <input type="text" name="dentist_name" class="form__field" placeholder="Dentist's full name">
-                <input type="text" name="dentist_address" class="form__field"
-                  placeholder="Practice name and address">
-                <input type="email" name="dentist_email" class="form__field" placeholder="Email">
-                <input type="tel" name="dentist_phone" class="form__field" placeholder="Phone">
-                <input type="text" name="dentist_gdc" class="form__field" placeholder="GDC number">
-
-              </div>
-              <div class="form-wrapper">
-                <h3>Patient details</h3>
-                <input type="text" name="user_name" class="form__field" placeholder="Patient's name">
-                <input type="date" name="user_datebirth" class="form__field" placeholder="Date of birth">
-                <input type="email" name="user_email" class="form__field" placeholder="Email">
-                <input type="tel" name="user_phone" class="form__field" placeholder="Phone">
-
-              </div>
-            </div>
-            <p class="site-description">
-              Region of interest: please indicate on the tooth diagram below
-            </p>
-            <div class="tooth">
-              <div class="tooth__table">
-                <div class="tooth__wrapper">
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-18" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-1.svg" type="image/webp"><img src="img/teeth/tooth-1.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-1.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-1.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">18</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-17" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-2.svg" type="image/webp"><img src="img/teeth/tooth-2.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-2.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-2.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">17</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-16" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-3.svg" type="image/webp"><img src="img/teeth/tooth-3.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-3.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-3.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">16</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-15"class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-4.svg" type="image/webp"><img src="img/teeth/tooth-4.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-4.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-4.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">15</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-14" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-5.svg" type="image/webp"><img src="img/teeth/tooth-5.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-5.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-5.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">14</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-13" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-6.svg" type="image/webp"><img src="img/teeth/tooth-6.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-6.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-6.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">13</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-12" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-7.svg" type="image/webp"><img src="img/teeth/tooth-7.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-7.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-7.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">12</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-11" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-8.svg" type="image/webp"><img src="img/teeth/tooth-8.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-8.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-8.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">11</span>
-                  </label>
+              <div class="form__table">
+                <div class="form-wrapper">
+                  <h3>Referring dentist</h3>
+                  <input type="text" name="dentist_name" class="form__field" placeholder="Dentist's full name" />
+                  <input type="text" name="dentist_address" class="form__field" placeholder="Practice name and address" />
+                  <input type="email" name="dentist_email" class="form__field" placeholder="Email" />
+                  <input type="tel" name="dentist_phone" class="form__field" placeholder="Phone" />
+                  <input type="text" name="dentist_gdc" class="form__field" placeholder="GDC number" />
                 </div>
-                <div class="tooth__wrapper">
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-21" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-9.svg" type="image/webp"><img src="img/teeth/tooth-9.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-9.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-9.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">21</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-22" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-10.svg" type="image/webp"><img src="img/teeth/tooth-10.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-10.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-10.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">22</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-23" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-11.svg" type="image/webp"><img src="img/teeth/tooth-11.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-11.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-11.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">23</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-24" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-12.svg" type="image/webp"><img src="img/teeth/tooth-12.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-12.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-12.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">24</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-25" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-13.svg" type="image/webp"><img src="img/teeth/tooth-13.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-13.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-13.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">25</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-26" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-14.svg" type="image/webp"><img src="img/teeth/tooth-14.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-14.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-14.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">26</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-27" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-15.svg" type="image/webp"><img src="img/teeth/tooth-15.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-15.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-15.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">27</span>
-                  </label>
-                  <label class="tooth__item">
-                    <input type="checkbox" name="tooth[]" value="tooth-28" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-16.svg" type="image/webp"><img src="img/teeth/tooth-16.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-16.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-16.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                    <span class="tooth__number">28</span>
-                  </label>
-                </div>
-                <div class="tooth__wrapper items-top">
-                  <label class="tooth__item">
-                    <span class="tooth__number">48</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-48" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-17.svg" type="image/webp"><img src="img/teeth/tooth-17.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-17.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-17.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">47</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-47" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-18.svg" type="image/webp"><img src="img/teeth/tooth-18.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-18.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-18.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">46</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-46" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-19.svg" type="image/webp"><img src="img/teeth/tooth-19.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-19.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-19.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">45</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-45" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-20.svg" type="image/webp"><img src="img/teeth/tooth-20.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-20.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-20.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">44</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-44" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-21.svg" type="image/webp"><img src="img/teeth/tooth-21.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-21.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-21.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">43</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-43" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-22.svg" type="image/webp"><img src="img/teeth/tooth-22.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-22.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-22.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">42</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-42" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-23.svg" type="image/webp"><img src="img/teeth/tooth-23.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-23.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-23.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">41</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-41" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-24.svg" type="image/webp"><img src="img/teeth/tooth-24.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-24.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-24.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                </div>
-                <div class="tooth__wrapper items-top">
-                  <label class="tooth__item">
-                    <span class="tooth__number">31</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-31" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-25.svg" type="image/webp"><img src="img/teeth/tooth-25.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-25.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-25.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">32</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-32" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-26.svg" type="image/webp"><img src="img/teeth/tooth-26.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-26.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-26.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">33</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-33" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-27.svg" type="image/webp"><img src="img/teeth/tooth-27.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-27.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-27.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">34</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-34" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-28.svg" type="image/webp"><img src="img/teeth/tooth-28.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-28.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-28.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">35</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-35" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-29.svg" type="image/webp"><img src="img/teeth/tooth-29.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-29.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-29.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">36</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-36" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-30.svg" type="image/webp"><img src="img/teeth/tooth-30.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-30.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-30.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">37</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-37" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-31.svg" type="image/webp"><img src="img/teeth/tooth-31.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-31.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-31.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
-                  <label class="tooth__item">
-                    <span class="tooth__number">38</span>
-                    <input type="checkbox" name="tooth[]" value="tooth-38" class="tooth__checkbox">
-                    <span class="tooth__images">
-                      <span class="tooth__image">
-                        <picture>
-                          <source srcset="img/teeth/tooth-32.svg" type="image/webp"><img src="img/teeth/tooth-32.svg"
-                            alt="Image of Tooth">
-                        </picture>
-                      </span>
-                      <span class="tooth__image_checked">
-                        <picture>
-                          <source srcset="img/teeth/tooth-check-32.svg" type="image/webp"><img
-                            src="img/teeth/tooth-check-32.svg" alt="Image of Tooth">
-                        </picture>
-                      </span>
-                    </span>
-                  </label>
+                <div class="form-wrapper">
+                  <h3>Patient details</h3>
+                  <input type="text" name="user_name" class="form__field" placeholder="Patient's name" />
+                  <input type="date" name="user_datebirth" class="form__field" placeholder="Date of birth" />
+                  <input type="email" name="user_email" class="form__field" placeholder="Email" />
+                  <input type="tel" name="user_phone" class="form__field" placeholder="Phone" />
                 </div>
               </div>
-            </div>
-            <p class="desktop-hidden">
-              Choose procedure
-            </p>
-            <div class="radio-container">
-              <label class="radio-item">
-                <input type="radio" name="procedure" value="Diagnose only" class="radio-item__input">
-                <span class="radio-item__text">Diagnose only</span>
-              </label>
-              <label class="radio-item">
-                <input type="radio" name="procedure" value="Diagnose and treat" class="radio-item__input">
-                <span class="radio-item__text">Diagnose and treat</span>
-              </label>
-            </div>
-            <textarea name="reason_for_referral" rows="1" class="form__field message"
-              placeholder="Please provide the reason for referral"></textarea>
-            <div class="files">
-              <label class="files-trigger">
-                <input type="file" name="upload[]" id="file" class="files-trigger__input" multiple>
-                <span class="files-trigger__text">
-                  <i class="icon-paper-clip"></i>
-                  Add files
-                </span>
-              </label>
-              <div class="files__table"></div>
-            </div>
-            <button type="submit" class="btn-primary">
-              Send
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
+              <p class="site-description">Region of interest: please indicate on the tooth diagram below</p>
+              <div class="tooth">
+                <div class="tooth__table">
+                  <div class="tooth__wrapper">
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-18" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-1.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-1.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-1.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-1.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">18</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-17" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-2.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-2.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-2.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-2.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">17</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-16" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-3.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-3.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-3.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-3.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">16</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-15" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-4.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-4.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-4.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-4.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">15</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-14" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-5.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-5.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-5.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-5.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">14</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-13" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-6.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-6.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-6.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-6.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">13</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-12" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-7.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-7.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-7.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-7.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">12</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-11" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-8.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-8.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-8.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-8.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">11</span>
+                    </label>
+                  </div>
+                  <div class="tooth__wrapper">
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-21" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-9.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-9.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-9.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-9.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">21</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-22" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-10.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-10.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-10.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-10.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">22</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-23" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-11.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-11.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-11.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-11.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">23</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-24" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-12.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-12.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-12.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-12.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">24</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-25" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-13.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-13.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-13.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-13.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">25</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-26" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-14.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-14.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-14.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-14.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">26</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-27" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-15.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-15.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-15.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-15.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">27</span>
+                    </label>
+                    <label class="tooth__item">
+                      <input type="checkbox" name="tooth[]" value="tooth-28" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-16.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-16.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-16.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-16.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                      <span class="tooth__number">28</span>
+                    </label>
+                  </div>
+                  <div class="tooth__wrapper items-top">
+                    <label class="tooth__item">
+                      <span class="tooth__number">48</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-48" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-17.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-17.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-17.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-17.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">47</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-47" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-18.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-18.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-18.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-18.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">46</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-46" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-19.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-19.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-19.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-19.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">45</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-45" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-20.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-20.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-20.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-20.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">44</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-44" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-21.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-21.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-21.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-21.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">43</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-43" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-22.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-22.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-22.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-22.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">42</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-42" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-23.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-23.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-23.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-23.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">41</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-41" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-24.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-24.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-24.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-24.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="tooth__wrapper items-top">
+                    <label class="tooth__item">
+                      <span class="tooth__number">31</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-31" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-25.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-25.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-25.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-25.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">32</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-32" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-26.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-26.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-26.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-26.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">33</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-33" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-27.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-27.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-27.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-27.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">34</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-34" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-28.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-28.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-28.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-28.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">35</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-35" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-29.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-29.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-29.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-29.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">36</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-36" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-30.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-30.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-30.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-30.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">37</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-37" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-31.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-31.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-31.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-31.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="tooth__item">
+                      <span class="tooth__number">38</span>
+                      <input type="checkbox" name="tooth[]" value="tooth-38" class="tooth__checkbox" />
+                      <span class="tooth__images">
+                        <span class="tooth__image">
+                          <picture>
+                            <source srcset="img/teeth/tooth-32.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-32.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                        <span class="tooth__image_checked">
+                          <picture>
+                            <source srcset="img/teeth/tooth-check-32.svg" type="image/webp" />
+                            <img src="img/teeth/tooth-check-32.svg" alt="Image of Tooth" />
+                          </picture>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <p class="desktop-hidden">Choose procedure</p>
+              <div class="radio-container">
+                <label class="radio-item">
+                  <input type="radio" name="procedure" value="Diagnose only" class="radio-item__input" />
+                  <span class="radio-item__text">Diagnose only</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="procedure" value="Diagnose and treat" class="radio-item__input" />
+                  <span class="radio-item__text">Diagnose and treat</span>
+                </label>
+              </div>
+              <textarea name="reason_for_referral" rows="1" class="form__field message" placeholder="Please provide the reason for referral"></textarea>
+              <div class="files">
+                <label class="files-trigger">
+                  <input type="file" name="upload[]" id="file" class="files-trigger__input" multiple />
+                  <span class="files-trigger__text">
+                    <i class="icon-paper-clip"></i>
+                    Add files
+                  </span>
+                </label>
+                <div class="files__table"></div>
+              </div>
+              <button type="submit" class="btn-primary">Send</button>
+            </form>
+          </div>
+        </section>
+      </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__row">
-          <a href="index.html" class="logo">
-            <picture>
-              <source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="Logo of Endoclinic">
-            </picture>
-          </a>
-          <ul class="footer__list">
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <a href="index.html" class="logo">
+              <picture>
+                <source srcset="img/logo.svg" type="image/webp" />
+                <img src="img/logo.svg" alt="Logo of Endoclinic" />
+              </picture>
+            </a>
+            <ul class="footer__list">
+              <li>
+                <a href="treatments.html"> Treatments </a>
+              </li>
+              <li>
+                <a href="technology.html"> Technology </a>
+              </li>
+              <li>
+                <a href="about.html"> About us </a>
+              </li>
+              <li>
+                <a href="contact.html"> Contact </a>
+              </li>
+              <li>
+                <a href="Locations.html"> Locations </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="footer__list__bottom">
             <li>
-              <a href="treatments.html">
-                Treatments
-              </a>
+              <h3>Phone</h3>
+              <a href="tel:020 3627 5732"> 020 3627 5732 </a>
             </li>
             <li>
-              <a href="technology.html">
-                Technology
-              </a>
+              <h3>Email</h3>
+              <a href="mailto:info@theendodonticclinic.co.uk"> info@theendodonticclinic.co.uk </a>
             </li>
             <li>
-              <a href="about.html">
-                About us
-              </a>
-            </li>
-            <li>
-              <a href="contact.html">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="Locations.html">
-                Locations
-              </a>
+              <h3>Location</h3>
+              <a href="#"> 57 Markham Street, London SW3 3NR</a>
             </li>
           </ul>
+          <div class="copyright">
+            <a href="#"> Terms and Conditions </a>
+            <a href="privacy-policy.html"> Privacy Policy </a>
+          </div>
         </div>
-        <ul class="footer__list__bottom">
-          <li>
-            <h3>Phone</h3>
-            <a href="tel:020 3627 5732">
-              020 3627 5732
-            </a>
-          </li>
-          <li>
-            <h3>Email</h3>
-            <a href="mailto:info@theendodonticclinic.co.uk">
-              info@theendodonticclinic.co.uk
-            </a>
-          </li>
-          <li>
-            <h3>Location</h3>
-            <a href="#">
-              57 Markham Street SW3 3NR London
-            </a>
-          </li>
-        </ul>
-        <div class="copyright">
-          <a href="#">
-            Terms and Conditions
-          </a>
-          <a href="privacy-policy.html">
-            Privacy Policy
-          </a>
-        </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <!-- Import Script's -->
+    <!-- Import Script's -->
 
-  <script src="./js/vendor.min.js"></script>
-  <script src="./js/main.js"></script>
-</body>
-
+    <script src="./js/vendor.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

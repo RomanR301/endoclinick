@@ -1,397 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endoclinic - Contacts</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endoclinic - Contacts</title>
+    <!-- Import Style's -->
+    <link rel="stylesheet" href="./css/vendor.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
 
-  <!-- Import Style's -->
-  <link rel="stylesheet" href="./css/vendor.min.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-</head>
-
-<body>
-
-  <div class="site-container">
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <picture>
-            <source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="Logo of Endoclinic">
-          </picture>
-        </a>
-        <nav class="nav">
-          <ul class="nav__list menu">
-            <li class="nav__item menu-item ">
-              <a href="treatments.html" class="nav__link">
-                <span class="symbol">Tr</span>
-                <span class="number">34</span>
-                <span class="title">Treatments</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="about.html" class="nav__link">
-                <span class="symbol">Ab</span>
-                <span class="number">27</span>
-                <span class="title">About us</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="technology.html" class="nav__link">
-                <span class="symbol">Te</span>
-                <span class="number">11</span>
-                <span class="title">Technology</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item plug">
-              <a href="" class="nav__link">
-                <span class="symbol"></span>
-                <span class="number"></span>
-                <span class="title"></span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="contacts.html" class="nav__link">
-                <span class="symbol">Co</span>
-                <span class="number">44</span>
-                <span class="title">Contact</span>
-              </a>
-            </li>
-            <li class="nav__item menu-item ">
-              <a href="contacts.html" class="nav__link">
-                <span class="symbol">Lo</span>
-                <span class="number">31</span>
-                <span class="title">Locations</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button class="burger">
-          <span class="burger__wrapper">
-            <span class="burger__line"></span>
-          </span>
-        </button>
-        <div class="header-contacts">
-          <ul class="header-contacts__list">
-            <li class="header-contacts__item">
-              <a href="#contacts-form" class="header-contacts__link scroll__link">
-                <i class="icon-email"></i>
-              </a>
-            </li>
-            <li class="header-contacts__item">
-              <a href="tel:02036275732" class="header-contacts__link">
-                <i class="icon-phone"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="header-content">
-          <div class="container">
-            <ul class="header-content__list">
-              <li class="header-content__item">
-                57 Markham Street SW3 3NR London
+  <body>
+    <div class="site-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <picture>
+              <source srcset="img/logo.svg" type="image/webp" />
+              <img src="img/logo.svg" alt="Logo of Endoclinic" />
+            </picture>
+          </a>
+          <nav class="nav">
+            <ul class="nav__list menu">
+              <li class="nav__item menu-item">
+                <a href="treatments.html" class="nav__link">
+                  <span class="symbol">Tr</span>
+                  <span class="number">34</span>
+                  <span class="title">Treatments</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                Level Zero, Crossrail Pl, London E14 5AR
+              <li class="nav__item menu-item">
+                <a href="about.html" class="nav__link">
+                  <span class="symbol">Ab</span>
+                  <span class="number">27</span>
+                  <span class="title">About us</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                Centurion Court, 64 London Road Reading RG1 5AS
+              <li class="nav__item menu-item">
+                <a href="technology.html" class="nav__link">
+                  <span class="symbol">Te</span>
+                  <span class="number">11</span>
+                  <span class="title">Technology</span>
+                </a>
               </li>
-              <li class="header-content__item">
-                61 Perrymount Rd, Haywards Heath RH16 1DN
+              <li class="nav__item menu-item plug">
+                <a href="" class="nav__link">
+                  <span class="symbol"></span>
+                  <span class="number"></span>
+                  <span class="title"></span>
+                </a>
               </li>
-              <li class="header-content__item">
-                21 New Church Road The City of BN3 4AD
+              <li class="nav__item menu-item">
+                <a href="contacts.html" class="nav__link">
+                  <span class="symbol">Co</span>
+                  <span class="number">44</span>
+                  <span class="title">Contact</span>
+                </a>
+              </li>
+              <li class="nav__item menu-item">
+                <a href="contacts.html" class="nav__link">
+                  <span class="symbol">Lo</span>
+                  <span class="number">31</span>
+                  <span class="title">Locations</span>
+                </a>
               </li>
             </ul>
-            <div class="header-content__footer">
-              <a href="tel:020 3627 5732" class="header-content__link">020 3627 5732</a>
-              <a href="referring.html" class="btn-secondary">
-                Referring dentist?
-              </a>
+          </nav>
+          <button class="burger">
+            <span class="burger__wrapper">
+              <span class="burger__line"></span>
+            </span>
+          </button>
+          <div class="header-contacts">
+            <ul class="header-contacts__list">
+              <li class="header-contacts__item">
+                <a href="#contacts-form" class="header-contacts__link scroll__link">
+                  <i class="icon-email"></i>
+                </a>
+              </li>
+              <li class="header-contacts__item">
+                <a href="tel:02036275732" class="header-contacts__link">
+                  <i class="icon-phone"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-content">
+            <div class="container">
+              <ul class="header-content__list">
+                <li class="header-content__item">57 Markham Street, London SW3 3NR</li>
+                <li class="header-content__item">Level Zero, Crossrail Pl, London E14 5AR</li>
+                <li class="header-content__item">Centurion Court, 64 London Road Reading RG1 5AS</li>
+                <li class="header-content__item">61 Perrymount Rd, Haywards Heath RH16 1DN</li>
+                <li class="header-content__item">21 New Church Road The City of BN3 4AD</li>
+              </ul>
+              <div class="header-content__footer">
+                <a href="tel:020 3627 5732" class="header-content__link">020 3627 5732</a>
+                <a href="referring.html" class="btn-secondary"> Referring dentist? </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <main>
-      <!-- Contacts -->
-      <section class="contacts">
-        <div class="container">
-          <a href="tel:020 3627 5732" class="contacts__phone">020 3627 5732</a>
-          <div id="map"></div>
-          <script>
-            mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw';
+      </header>
+      <main>
+        <!-- Contacts -->
+        <section class="contacts">
+          <div class="container">
+            <a href="tel:020 3627 5732" class="contacts__phone">020 3627 5732</a>
+            <div id="map"></div>
+            <script>
+              mapboxgl.accessToken = "pk.eyJ1Ijoicm9tYW5yMzAxIiwiYSI6ImNsMGNiZG9hNjA0dGoza3M0MTF6Zmh3a3QifQ.kIQq1w4vsZLfKxSDZeGSZw";
 
-            const geojson = {
-              'type': 'FeatureCollection',
-              'features': [
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.165, 51.490]
+              const geojson = {
+                type: "FeatureCollection",
+                features: [
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.165, 51.49],
+                    },
+                    properties: {
+                      icon: "img/practices/practices-logo-chelsea-green.svg",
+                      title: "Chelsea Green Dental",
+                      description: "57 Markham Street SW3 3NR London",
+                      link: "Enquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/practices/practices-logo-chelsea-green.svg',
-                    'title': 'Chelsea Green Dental',
-                    'description': '57 Markham Street SW3 3NR London',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.018, 51.506]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.018, 51.506],
+                    },
+                    properties: {
+                      icon: "img/practices/map-bupa-dental.png",
+                      title: "Clinic Dental Facial",
+                      description: "Level Zero, Crossrail Pl, London E14 5AR",
+                      link: "Enquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/practices/map-bupa-dental.png',
-                    'title': 'Clinic Dental Facial',
-                    'description': 'Level Zero, Crossrail Pl, London E14 5AR',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.395, 51.534]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.395, 51.534],
+                    },
+                    properties: {
+                      icon: "img/map-icon-bupa.svg",
+                      title: "Bupa Health and Dental Centre Reading",
+                      description: "Centurion Court, 64 London Road Reading RG1 5AS",
+                      link: "Enquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Bupa Health and Dental Centre Reading',
-                    'description': 'Centurion Court, 64 London Road Reading RG1 5AS',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.103, 51.006]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.103, 51.006],
+                    },
+                    properties: {
+                      icon: "img/map-icon-bupa.svg",
+                      title: "Bupa Health and Dental Centre Canary Wharf",
+                      description: "61 Perrymount Rd, Haywards Heath RH16 1DN",
+                      link: "Enquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/map-icon-bupa.svg',
-                    'title': 'Bupa Health and Dental Centre Canary Wharf',
-                    'description': '61 Perrymount Rd, Haywards Heath RH16 1DN',
-                    'link': 'Inquire now'
-                  }
-                },
-                {
-                  'type': 'Feature',
-                  'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-0.184, 50.830]
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-0.184, 50.83],
+                    },
+                    properties: {
+                      icon: "img/practices/map-twentyonedental.svg",
+                      title: "TwentyOneDental",
+                      description: "21 New Church Road The City of BN3 4AD",
+                      link: "Enquire now",
+                    },
                   },
-                  'properties': {
-                    'icon': 'img/practices/map-twentyonedental.svg',
-                    'title': 'TwentyOneDental',
-                    'description': '21 New Church Road The City of BN3 4AD',
-                    'link': 'Inquire now'
-                  }
-                }
-              ]
-            };
-            const map = new mapboxgl.Map({
-              container: 'map',
-              style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
-              center: [-0.007, 51.170],
-              zoom: 8
-            });
-            for (const feature of geojson.features) {
-              // create a HTML element for each feature
-              const el = document.createElement('div');
-              el.className = 'marker';
-              // make a marker for each feature and add it to the map
-              new mapboxgl.Marker(el)
-                .setLngLat(feature.geometry.coordinates)
-                .setPopup(
-                  new mapboxgl.Popup({ offset: 25 }) // add popups
-                    .setHTML(
-                      `<div class="popup-header">
+                ],
+              };
+              const map = new mapboxgl.Map({
+                container: "map",
+                style: "mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g",
+                center: [-0.007, 51.17],
+                zoom: 8,
+              });
+              for (const feature of geojson.features) {
+                // create a HTML element for each feature
+                const el = document.createElement("div");
+                el.className = "marker";
+                // make a marker for each feature and add it to the map
+                new mapboxgl.Marker(el)
+                  .setLngLat(feature.geometry.coordinates)
+                  .setPopup(
+                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                      .setHTML(
+                        `<div class="popup-header">
                         <img src="${feature.properties.icon}">
                         <div class="popup__title">${feature.properties.title}</div>
                       </div>
                       <p>${feature.properties.description}</p>
                       <a href="#">${feature.properties.link}</a>`
-                    )
-                )
-                .addTo(map);
-            }
-            var nav = new mapboxgl.NavigationControl();
-            map.addControl(nav, 'top-right');
-            map.addControl(new mapboxgl.FullscreenControl());
-            map.scrollZoom.disable();
-          </script>
-          <div class="contacts__table">
-            <h3>Locations</h3>
-            <div class="contacts__wrapper locations__wrapper">
-              <ul class="contacts__list">
-                <li>
-                  57 Markham Street SW3 3NR London
-                </li>
-                <li>
-                  Level Zero, Crossrail Pl, London E14 5AR
-                </li>
-                <li>
-                  Centurion Court, 64 London Road Reading RG1 5AS
-                </li>
-                <li>
-                  61 Perrymount Rd, Haywards Heath RH16 1DN
-                </li>
-                <li>
-                  21 New Church Road The City of BN3 4AD
-                </li>
-              </ul>
+                      )
+                  )
+                  .addTo(map);
+              }
+              var nav = new mapboxgl.NavigationControl();
+              map.addControl(nav, "top-right");
+              map.addControl(new mapboxgl.FullscreenControl());
+              map.scrollZoom.disable();
+            </script>
+            <div class="contacts__table">
+              <h3>Locations</h3>
+              <div class="contacts__wrapper locations__wrapper">
+                <ul class="contacts__list">
+                  <li>57 Markham Street SW3 3NR London</li>
+                  <li>Level Zero, Crossrail Pl, London E14 5AR</li>
+                  <li>Centurion Court, 64 London Road Reading RG1 5AS</li>
+                  <li>61 Perrymount Rd, Haywards Heath RH16 1DN</li>
+                  <li>21 New Church Road The City of BN3 4AD</li>
+                </ul>
+              </div>
+            </div>
+            <div class="contacts__table">
+              <div class="contacts__wrapper">
+                <h3>Email</h3>
+                <ul class="contacts__list">
+                  <li>
+                    <a href="mailto:info@theendodonticclinic.co.uk">info@theendodonticclinic.co.uk</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts__wrapper">
+                <h3>Socials</h3>
+                <ul class="contacts__list contacts__socials__list">
+                  <li>
+                    <a href="#"> Instagram </a>
+                  </li>
+                  <li>
+                    <a href="#"> Facebook </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="contacts__table">
-            <div class="contacts__wrapper">
-              <h3>Email</h3>
-              <ul class="contacts__list">
-                <li>
-                  <a href="mailto:info@theendodonticclinic.co.uk">info@theendodonticclinic.co.uk</a>
-                </li>
-              </ul>
+        </section>
+        <!-- Contacts form -->
+        <section id="contacts-form" class="contacts-form" role="form">
+          <div class="container">
+            <div class="section-header">
+              <h2>Contacts us</h2>
+              <a href="referring.html" class="btn-secondary"> Referring dentist? </a>
             </div>
-            <div class="contacts__wrapper">
-              <h3>Socials</h3>
-              <ul class="contacts__list contacts__socials__list">
-                <li>
-                  <a href="#">
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Facebook
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <form action="sendEmail.php" method="POST" class="form" enctype="multipart/form-data">
+              <input type="text" name="user_name" class="form__field" placeholder="Name" />
+              <input type="tel" name="user_phone" class="form__field" placeholder="Phone" />
+              <input type="email" name="user_email" class="form__field" placeholder="Email" />
+
+              <select name="user_issue" id="mounth">
+                <option value="hide">Dental issue</option>
+                <option value="root canal treatment">Root canal treatment</option>
+                <option value="tooth infection">Tooth infection</option>
+                <option value="toothache">Toothache</option>
+                <option value="lost filling">Lost filling</option>
+                <option value="lost crown">Lost crown</option>
+                <option value="bleaching">Bleaching</option>
+                <option value="broken tooth">Broken tooth</option>
+                <option value="other">Other</option>
+              </select>
+              <textarea name="user_message" rows="1" class="form__field message" placeholder="Message"></textarea>
+              <button type="submit" class="btn-primary">Send</button>
+            </form>
           </div>
-        </div>
-      </section>
-      <!-- Contacts form -->
-      <section id="contacts-form" class="contacts-form" role="form">
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
         <div class="container">
-          <div class="section-header">
-            <h2>Contacts us</h2>
-            <a href="referring.html" class="btn-secondary">
-              Referring dentist?
+          <div class="footer__row">
+            <a href="index.html" class="logo">
+              <picture>
+                <source srcset="img/logo.svg" type="image/webp" />
+                <img src="img/logo.svg" alt="Logo of Endoclinic" />
+              </picture>
             </a>
+            <ul class="footer__list">
+              <li>
+                <a href="treatments.html"> Treatments </a>
+              </li>
+              <li>
+                <a href="technology.html"> Technology </a>
+              </li>
+              <li>
+                <a href="about.html"> About us </a>
+              </li>
+              <li>
+                <a href="contact.html"> Contact </a>
+              </li>
+              <li>
+                <a href="Locations.html"> Locations </a>
+              </li>
+            </ul>
           </div>
-          <form action="sendEmail.php" method="POST" class="form" enctype="multipart/form-data">
-            <input type="text" name="user_name" class="form__field" placeholder="Name">
-            <input type="tel" name="user_phone" class="form__field" placeholder="Phone">
-            <input type="email" name="user_email" class="form__field" placeholder="Email">
-
-            <select name="user_issue" id="mounth">
-              <option value="hide">Dental issue</option>
-              <option value="root canal treatment">Root canal treatment</option>
-              <option value="tooth infection">Tooth infection</option>
-              <option value="toothache">Toothache</option>
-              <option value="lost filling">Lost filling</option>
-              <option value="lost crown">Lost crown</option>
-              <option value="bleaching">Bleaching</option>
-              <option value="broken tooth">Broken tooth</option>
-              <option value="other">Other</option>
-            </select>
-            <textarea name="user_message" rows="1" class="form__field message" placeholder="Message"></textarea>
-            <button type="submit" class="btn-primary">
-              Send
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__row">
-          <a href="index.html" class="logo">
-            <picture>
-              <source srcset="img/logo.svg" type="image/webp"><img src="img/logo.svg" alt="Logo of Endoclinic">
-            </picture>
-          </a>
-          <ul class="footer__list">
+          <ul class="footer__list__bottom">
             <li>
-              <a href="treatments.html">
-                Treatments
-              </a>
+              <h3>Phone</h3>
+              <a href="tel:020 3627 5732"> 020 3627 5732 </a>
             </li>
             <li>
-              <a href="technology.html">
-                Technology
-              </a>
+              <h3>Email</h3>
+              <a href="mailto:info@theendodonticclinic.co.uk"> info@theendodonticclinic.co.uk </a>
             </li>
             <li>
-              <a href="about.html">
-                About us
-              </a>
-            </li>
-            <li>
-              <a href="contact.html">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="Locations.html">
-                Locations
-              </a>
+              <h3>Location</h3>
+              <a href="#">57 Markham Street, London SW3 3NR </a>
             </li>
           </ul>
+          <div class="copyright">
+            <a href="#"> Terms and Conditions </a>
+            <a href="privacy-policy.html"> Privacy Policy </a>
+          </div>
         </div>
-        <ul class="footer__list__bottom">
-          <li>
-            <h3>Phone</h3>
-            <a href="tel:020 3627 5732">
-              020 3627 5732
-            </a>
-          </li>
-          <li>
-            <h3>Email</h3>
-            <a href="mailto:info@theendodonticclinic.co.uk">
-              info@theendodonticclinic.co.uk
-            </a>
-          </li>
-          <li>
-            <h3>Location</h3>
-            <a href="#">
-              57 Markham Street SW3 3NR London
-            </a>
-          </li>
-        </ul>
-        <div class="copyright">
-          <a href="#">
-            Terms and Conditions
-          </a>
-          <a href="privacy-policy.html">
-            Privacy Policy
-          </a>
-        </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <!-- Import Script's -->
+    <!-- Import Script's -->
 
-  <script src="./js/vendor.min.js"></script>
-  <script src="./js/main.js"></script>
-</body>
-
+    <script src="./js/vendor.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
