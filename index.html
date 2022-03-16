@@ -858,14 +858,30 @@
                 container: 'map',
                 style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
                 center: [-0.007, 51.170],
-                zoom: 6.7
+                zoom: 8
               });
               for (const feature of geojson.features) {
                 // create a HTML element for each feature
                 const el = document.createElement('div');
                 el.className = 'marker';
                 // make a marker for each feature and add it to the map
-                new mapboxgl.Marker(el)
+                if (window.matchMedia("(min-width: 992px)").matches) {
+                  new mapboxgl.Marker(el)
+                  .setLngLat(feature.geometry.coordinates)
+                  .setPopup(
+                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                      .setHTML(
+                        `<div class="popup-header">
+                          <img src="${feature.properties.icon}">
+                          <div class="popup__title">${feature.properties.title}</div>
+                        </div>
+                        <p>${feature.properties.description}</p>
+                        <a href="#contacts">${feature.properties.link}</a>`
+                      )
+                  )
+                  .addTo(map);
+                } else {
+                  new mapboxgl.Marker(el)
                   .setLngLat(feature.geometry.coordinates)
                   .setPopup(
                     new mapboxgl.Popup({ offset: 25, anchor: 'bottom' }) // add popups
@@ -879,6 +895,7 @@
                       )
                   )
                   .addTo(map);
+                }
               }
               var nav = new mapboxgl.NavigationControl();
               map.addControl(nav, 'top-right');
