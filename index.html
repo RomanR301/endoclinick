@@ -536,7 +536,7 @@
                       <img src="img/practices/practices-logo-dental.svg" alt="Bupa Dental logo" />
                     </div>
                     <div class="card__text">
-                      <h3>Clinic Dental Facial</h3>
+                      <h3>The Clinic Dental Facial</h3>
                     </div>
                   </div>
                 </div>
@@ -796,7 +796,7 @@
                     'properties': {
                       'icon': 'img/practices/practices-logo-chelsea-green.svg',
                       'title': 'Chelsea Green Dental',
-                      'description': '57 Markham Street SW3 3NR London',
+                      'description': '57 Markham Street, London SW3 3NR',
                       'link': 'Enquire now'
                     }
                   },
@@ -808,7 +808,7 @@
                     },
                     'properties': {
                       'icon': 'img/practices/map-bupa-dental.png',
-                      'title': 'Clinic Dental Facial',
+                      'title': 'The Clinic Dental Facial',
                       'description': 'Level Zero, Crossrail Pl, London E14 5AR',
                       'link': 'Enquire now'
                     }
@@ -858,7 +858,7 @@
                 container: 'map',
                 style: 'mapbox://styles/romanr301/cl0ccrtep000l14p6ul4vrt4g',
                 center: [-0.007, 51.170],
-                zoom: 8
+                zoom: 6.7
               });
               for (const feature of geojson.features) {
                 // create a HTML element for each feature
@@ -868,14 +868,14 @@
                 new mapboxgl.Marker(el)
                   .setLngLat(feature.geometry.coordinates)
                   .setPopup(
-                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                    new mapboxgl.Popup({ offset: 25, anchor: 'bottom' }) // add popups
                       .setHTML(
                         `<div class="popup-header">
                           <img src="${feature.properties.icon}">
                           <div class="popup__title">${feature.properties.title}</div>
                         </div>
                         <p>${feature.properties.description}</p>
-                        <a href="#">${feature.properties.link}</a>`
+                        <a href="#contacts">${feature.properties.link}</a>`
                       )
                   )
                   .addTo(map);
@@ -886,6 +886,7 @@
               map.scrollZoom.disable();
             </script>
           </div>
+          <div id="contacts"></div>
         </section>
         <!-- Contacts form -->
         <section id="contacts-form" class="contacts-form" role="form">
@@ -960,7 +961,7 @@
             </li>
           </ul>
           <div class="copyright">
-            <a href="#"> Terms and Conditions </a>
+            <a href="terms-and-conditions.html"> Terms and Conditions </a>
             <a href="privacy-policy.html"> Privacy Policy </a>
           </div>
         </div>

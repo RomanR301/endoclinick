@@ -342,11 +342,6 @@ button {
 .mapboxgl-popup {
   max-width: 400px!important;
 }
-@media (max-width: 768px) {
-  .mapboxgl-popup {
-    max-width:unset!important;
-  }
-}
 .popup-header {
   margin-bottom: 8px;
   display: flex;
@@ -380,6 +375,20 @@ button {
 }
 .mapboxgl-popup-content a:hover {
   border-color: #BC8B5E;
+}
+@media (max-width: 768px) {
+  .mapboxgl-popup {
+    max-width: 270px!important;
+  }
+  .popup-header img {
+    max-width: 75px;
+  }
+  .popup-header .popup__title {
+    font-size: 15px;
+  }
+  .mapboxgl-popup-content p {
+    font-size: 14px;
+  }
 }
 .site-container {
   margin: 0 auto;
