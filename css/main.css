@@ -317,6 +317,9 @@ button {
   outline: none;
 }
 
+.footer-location {
+  line-height: 1;
+}
 #map {
   width: 100%;
   height: 500px;
@@ -1950,40 +1953,65 @@ em {
 .privacy {
   padding: 124px 0 40px;
 }
-
-.privacy h3 {
+.entry-content h3 {
   color: #AEE2CE;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
-}
-
-.privacy p {
   margin: 20px 0;
 }
-
-.privacy p span {
+.entry-content p {
+  margin: 20px 0;
+}
+.entry-content p span {
   display: block;
   font-weight: 700;
 }
-
-.privacy li {
+.entry-content ul {
+  margin-bottom: 20px;
+}
+.entry-content ul li {
   position: relative;
   padding-left: 24px;
+  margin-bottom: 8px;
+  color: #ffffff;
+  line-height: 1.4;
 }
-
-.privacy li::before {
+.entry-content ul li:before {
   background: #ffffff;
   content: '';
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 6px;
+  left: 6px;
   width: 6px;
   height: 6px;
   border-radius: 100px;
 }
-
-.privacy a {
+.entry-content ol {
+  padding: 0 0 0 20px;
+  margin-bottom: 20px;
+}
+.entry-content ol li {
+  margin-bottom: 8px;
+  color: #ffffff;
+  line-height: 1.4;
+}
+.entry-content .list-dashed li {
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.entry-content .list-dashed li:before {
+  background: unset;
+  content: '—';
+  width: unset;
+  height: unset;
+  position: absolute;
+  border-radius: unset;
+  top: 0;
+  left: 0;
+}
+.entry-content a {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
@@ -1992,8 +2020,7 @@ em {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-.privacy a:hover {
+.entry-content a:hover {
   color: #BC8B5E;
 }
 
